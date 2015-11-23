@@ -2,30 +2,38 @@ var myApp = angular.module('myApp', ['firebase', 'ui.router']);
 
 myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
 
-	// var ref = new Firebase('');
+	var ref = new Firebase('https://uw-gamer.firebaseio.com/');
 
-	// var usersRef = ref.child('users');
+	var usersRef = ref.child('users');
+	var entriesRef = ref.child('entries');
 
-	// $scope.users = $firebaseObject(usersRef);
+	$scope.users = $firebaseObject(usersRef);
+	$scope.entries = $firebaseObject(pastEntriesRef)
+	
+	$scope.authObj = $firebaseAuth(ref);
+	
+	var authData = $scope.authObj.$getAuth();
+	if (authData) {
+		$scope.userId = authData.uid;
+	}
 
-	// $scope.authObj = $firebaseObject(ref);
-	// var authData = $scope.authObj.$getAuth();
-	// if (authData) {
-	// 	$scope.userId = authData.uid;
-	// }
+	$scope.signIn = function() {
+		$scope.logIn().then(function(authData) {
+			$scope.userId = authData.uid;
+		})
+	}
 
-	// $scope.signIn = function() {
-	// 	$scope.logIn().then(function(authData) {
-	// 		$scope.userId = authData.uid;
-	// 	})
-	// }
+	$scope.logIn = function() {
+		return $scope.authObj.$authWithPassword({
+			username: $scope.username,
+			password: $scope.password
+		})
+	}
 
-	// $scope.logIn = function() {
-	// 	return $scope.authObj.$authWithPassword({
-	// 		username: $scope.username,
-	// 		password: $scope.password
-	// 	})
-	// }
+	$scope.logOut = function() {
+		$scope.authObj.$unauth()
+		$scope.userId = false
+	}
 
 	
 });
