@@ -21,34 +21,46 @@
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
+	<div id='wrapper'>
+		<div id='header'></div>
+		<div id='content'>
+			<div class='container' ng-show='!userId'>
+				<h1>GAMER Group</h1>
+				<h2>GAme MEtadata Research</h2>
+				<form name='logInForm' novalidate>
+					<div class='form-group'>
+						<label>Email:</label>
+						<input ng-model='email' name='email' class='form-control' type='email' ng-required='true'/>
+						<p ng-show='logInForm.email.$error.email' class='help-block'>Not an email</p>
+					</div>
+					<div class='form-group'>
+						<label>Password:</label>
+						<input ng-model='password' name='password' type='password' class='form-control' ng-minlength='6' ng-required='true' />
+						<p ng-show='logInForm.password.$error.minlength' class='help-block'>Password is too short</p>
+					</div>
+					<div>
+						<button ng-click='signIn()' ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
+					</div>
+				</form>
+			</div>
 
-	<div class='container' ng-show='!userId'>
-		<h1>GAMER Group</h1>
-		<h2>GAme MEtadata Research</h2>
-		<form name='logInForm' novalidate>
-			<div class='form-group'>
-				<label>Username:</label>
-				<input ng-model='username' name='username' class='form-control' ng-minlength='6' ng-required='true'/>
-				<p ng-show='logInForm.username.$error.minlength' class='help-block'>Username is too short</p>
+			<div ng-show='userId' class='container-fluid'>
+				<nav class='navbar navbar-default navbar-fixed-top'>
+					<div class='container-fluid' id='navbarItems'>
+						<div class='navbar-header'>	
+							<a ui-sref='profile' class='navbarLink'>Profile</a>
+							<a ui-sref='form' class='navbarLink'>Add Game</a>
+							<button ng-click='logOut()' type='button' class='btn btn-warning' id='logOutButton'>Log Out</button>
+						</div>
+					</div>
+				</nav>
+				<div id='changingContent' ui-view></div>
 			</div>
-			<div class='form-group'>
-				<label>Password:</label>
-				<input ng-model='password' name='password' type='password' class='form-control' ng-minlength='6' ng-required='true' />
-				<p ng-show='logInForm.password.$error.minlength' class='help-block'>Password is too short</p>
-			</div>
-			<div>
-				<button  ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
-			</div>
-		</form>
+		</div>
+
+		<div id='footer'>
+			Copyright 2015 GAMER Group
+		</div>
 	</div>
-
-	<div ng-show='userId' class='container-fluid' id='changingContent'>
-		<div ui-view></div>
-	</div>
-
-	<footer>
-		Copyright 2015 GAMER Group
-	</footer>
-
 </body>
 </html>

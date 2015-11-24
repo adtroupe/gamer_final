@@ -8,7 +8,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 	var entriesRef = ref.child('entries');
 
 	$scope.users = $firebaseObject(usersRef);
-	$scope.entries = $firebaseObject(pastEntriesRef)
+	$scope.entries = $firebaseObject(entriesRef)
 	
 	$scope.authObj = $firebaseAuth(ref);
 	
@@ -25,7 +25,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 
 	$scope.logIn = function() {
 		return $scope.authObj.$authWithPassword({
-			username: $scope.username,
+			email: $scope.email,
 			password: $scope.password
 		})
 	}
@@ -33,9 +33,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 	$scope.logOut = function() {
 		$scope.authObj.$unauth()
 		$scope.userId = false
-	}
-
-	
+	}	
 });
 
 myApp.config(function($stateProvider, $urlRouterProvider) {

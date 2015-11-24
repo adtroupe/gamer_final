@@ -18,6 +18,35 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
+.navbar {
+    min-height: inherit;
+    background-color: #363636;
+    border-bottom: 3px solid #FF4500;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbarLink:link, .navbarLink:visited {
+    color: white;
+}
+
+.navbarLink:hover, .navbarLink:active {
+    color: #FF4500;
+}
+
+
+#logOutButton {
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#changingContent {
+    margin-top: 75px;
+}
+
 /*.container button {*/
     /*background-color: #FF4500;*/
     /*color: white;*/
@@ -30,7 +59,7 @@ body {
     margin: 3em;
 }
 
-footer {
+#footer {
     background-color: #363636;
     border-bottom: 3px solid #FF4500;
     padding: 1em;
