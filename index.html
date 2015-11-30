@@ -38,9 +38,9 @@
 				<form name='logInForm' novalidate>
 					<div class='form-group'>
 
-						<label>Username:</label>
+<!-- 						<label>Username:</label>
 						<input ng-model='username' name='username' class='form-control' ng-minlength='6' ng-required='true'/>
-						<p ng-show='logInForm.username.$error.minlength' class='help-block'>Username is too short</p>
+						<p ng-show='logInForm.username.$error.minlength' class='help-block'>Username is too short</p> -->
 
 						<label>Email:</label>
 						<input ng-model='email' name='email' class='form-control' type='email' ng-required='true'/>
@@ -54,33 +54,29 @@
 					</div>
 					<div>
 
-						<button  ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
+<!-- 						<button  ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button> -->
 
 						<button ng-click='signIn()' ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
 					</div>
 				</form>
 			</div>
+    	
+            <div ng-show='userId' class='container-fluid'>
+                <nav class='navbar navbar-default navbar-fixed-top'>
+                    <div class='container-fluid' id='navbarItems'>
+                        <div class='navbar-header'> 
+                            <a ui-sref='profile' class='navbarLink'>Profile</a>
+                            <a ui-sref='form' class='navbarLink'>Add Game</a>
+                            <button ng-click='logOut()' type='button' class='btn btn-warning' id='logOutButton'>Log Out</button>
+                        </div>
+                    </div>
+                </nav>
+                <div id='changingContent' ui-view></div>
+            </div>
 
-			<div ng-show='userId' class='container-fluid' id='changingContent'>
-				<div ui-view></div>
-			</div>
-		</div>
+        </div>
 
-		<div id="footer">
 
-			<div ng-show='userId' class='container-fluid'>
-				<nav class='navbar navbar-default navbar-fixed-top'>
-					<div class='container-fluid' id='navbarItems'>
-						<div class='navbar-header'>	
-							<a ui-sref='profile' class='navbarLink'>Profile</a>
-							<a ui-sref='form' class='navbarLink'>Add Game</a>
-							<button ng-click='logOut()' type='button' class='btn btn-warning' id='logOutButton'>Log Out</button>
-						</div>
-					</div>
-				</nav>
-				<div id='changingContent' ui-view></div>
-			</div>
-		</div>
 
 		<div id='footer'>
 			Copyright &copy; 2015 GAMER Group
