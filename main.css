@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Sans:700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body {
@@ -13,6 +13,7 @@ body {
 
 .container h1 {
     font-size: 38px;
+    font-weight: 700;
     font-family: 'Droid Sans', sans-serif;
 }
 
@@ -53,6 +54,7 @@ body {
 .btn {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-family: 'Droid Sans', sans-serif;
 }
 /*.container button {*/
     /*background-color: #FF4500;*/
