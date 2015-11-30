@@ -2,46 +2,89 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 
-	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script> 
-	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>  
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 
 	<script src="main.js"></script>
-	<link href="main.css" type="text/css" rel="stylesheet"/>  
+	<link href="main.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
-	<div class='container' ng-show='!userId'>
-		<form name='logInForm' novalidate>
-			<div class='form-group'>
-				<label>Username:</label>
-				<input ng-model='username' name='username' class='form-control' ng-minlength='6' ng-required='true'/>
-				<p ng-show='logInForm.username.$error.minlength' class='help-block'>Username is too short</p>
-			</div>
-			<div class='form-group'>
-				<label>Password:</label>
-				<input ng-model='password' name='password' type='password' class='form-control' ng-minlength='6' ng-required='true' />
-				<p ng-show='logInForm.password.$error.minlength' class='help-block'>Password is too short</p>
-			</div>
-			<div>
-				<button  ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
-			</div>
-		</form>
-	</div>
 
-	<div ng-show='userId' class='container-fluid' id='changingContent'>
-		<div ui-view></div>
-	</div>
+	<!--<div id="wrapper">-->
 
+		<!--&lt;!&ndash; A place to put the nav bar, probably &ndash;&gt;-->
+		<!--<div id="header"></div>-->
+
+		<!--<div id="content">-->
+	<div id='wrapper'>
+		<div id='header'></div>
+		<div id='content'>
+
+			<div class='container' ng-show='!userId'>
+				<h1>GAMER Group</h1>
+				<h2>GAme MEtadata Research</h2>
+				<form name='logInForm' novalidate>
+					<div class='form-group'>
+
+						<label>Username:</label>
+						<input ng-model='username' name='username' class='form-control' ng-minlength='6' ng-required='true'/>
+						<p ng-show='logInForm.username.$error.minlength' class='help-block'>Username is too short</p>
+
+						<label>Email:</label>
+						<input ng-model='email' name='email' class='form-control' type='email' ng-required='true'/>
+						<p ng-show='logInForm.email.$error.email' class='help-block'>Not an email</p>
+
+					</div>
+					<div class='form-group'>
+						<label>Password:</label>
+						<input ng-model='password' name='password' type='password' class='form-control' ng-minlength='6' ng-required='true' />
+						<p ng-show='logInForm.password.$error.minlength' class='help-block'>Password is too short</p>
+					</div>
+					<div>
+
+						<button  ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
+
+						<button ng-click='signIn()' ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
+					</div>
+				</form>
+			</div>
+
+			<div ng-show='userId' class='container-fluid' id='changingContent'>
+				<div ui-view></div>
+			</div>
+		</div>
+
+		<div id="footer">
+
+			<div ng-show='userId' class='container-fluid'>
+				<nav class='navbar navbar-default navbar-fixed-top'>
+					<div class='container-fluid' id='navbarItems'>
+						<div class='navbar-header'>	
+							<a ui-sref='profile' class='navbarLink'>Profile</a>
+							<a ui-sref='form' class='navbarLink'>Add Game</a>
+							<button ng-click='logOut()' type='button' class='btn btn-warning' id='logOutButton'>Log Out</button>
+						</div>
+					</div>
+				</nav>
+				<div id='changingContent' ui-view></div>
+			</div>
+		</div>
+
+		<div id='footer'>
+			Copyright &copy; 2015 GAMER Group
+		</div>
+	</div>
 </body>
 </html>

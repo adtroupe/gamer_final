@@ -1,14 +1,94 @@
-/* PROFILE PAGE */
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:700);
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body {
-	font-family: 'Droid Serif', 'Lora', 'Georgia', serif;
-	background-color: #ff581c;
-    background-image: url('http://gamer.ischool.uw.edu/wp-content/uploads/2014/02/letmelivedeepwhileilive.jpg');
+    color: white;
+    background-color: black;
 }
 
-p {
-	font-family: 'Press Start 2P', cursive;
+.container h1 {
+    font-size: 38px;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.container h2 {
+    color: #a7a4a4;
+    margin-top: 0;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.navbar {
+    min-height: inherit;
+    background-color: #363636;
+    border-bottom: 3px solid #FF4500;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbarLink:link, .navbarLink:visited {
+    color: white;
+}
+
+.navbarLink:hover, .navbarLink:active {
+    color: #FF4500;
+}
+
+
+#logOutButton {
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#changingContent {
+    margin-top: 75px;
+}
+
+/*.container button {*/
+    /*background-color: #FF4500;*/
+    /*color: white;*/
+/*}*/
+
+.container {
+    background-color: #363636;
+    /*   background-image: url("img/composite grid.jpg");*/
+    padding: 3em;
+    margin: 3em;
+}
+
+#footer {
+    background-color: #363636;
+    border-bottom: 3px solid #FF4500;
+    padding: 1em;
+}
+
+/*copy and paste below */
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+#header {
+    background:#ededed;
+    padding:10px;
+}
+#content {
+    padding-bottom:100px; /* Height of the footer element */
+}
+#footer {
+    background:#363636;
+    width:100%;
+    height:50px;
+    position:absolute;
+    bottom:0;
+    left:0;
 }
 
 #profile-info {
@@ -29,4 +109,32 @@ p {
 #added-games {
 	padding-top: 2em;
 	background-color: #F7F7F7;
+}
+
+@media screen and (min-width: 768px) {
+    .container h1 {
+        font-size: 72px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container h1 {
+        font-size: 100px;
+    }
+
+    .container h2 {
+        font-size: 36px;
+    }
+
+    .container label {
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 2em;
+    }
 }
