@@ -44,7 +44,7 @@ body {
 }
 
 #changingContent {
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 /*.container button {*/
@@ -57,12 +57,6 @@ body {
     /*   background-image: url("img/composite grid.jpg");*/
     padding: 3em;
     margin: 3em;
-}
-
-#footer {
-    background-color: #363636;
-    border-bottom: 3px solid #FF4500;
-    padding: 1em;
 }
 
 /*copy and paste below */
@@ -89,6 +83,8 @@ body {
     position:absolute;
     bottom:0;
     left:0;
+    border-bottom: 3px solid #FF4500;
+    padding: 1em;
 }
 
 #profile-info {
