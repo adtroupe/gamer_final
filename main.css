@@ -42,13 +42,21 @@ body {
     color: #FF4500;
 }
 
-
 #logOutButton {
     float: right;
 }
 
 #changingContent {
     margin-top: 50px;
+}
+
+.modal-content {
+    background-color: #363636;
+}
+
+#modalCloseButton {
+    display: inline;
+    float: right;
 }
 
 .btn {

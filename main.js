@@ -13,6 +13,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 	$scope.authObj = $firebaseAuth(ref);
 	
 	var authData = $scope.authObj.$getAuth();
+	$scope.authData = authData;
 	if (authData) {
 		$scope.userId = authData.uid;
 	}
@@ -39,7 +40,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 myApp.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.when('','/')
 	$stateProvider.state('profile', {
-		url: '/profile',
+		url: '/',
 		templateUrl: 'templates/profile.html',
 		controller: 'ProfileController',
 	})
@@ -50,8 +51,16 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 	})
 })
 
-.controller('ProfileController', function($scope) {
-
+.controller('ProfileController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
+	$scope.updateProfile = function() {
+			var userId = $scope.authData.uid;
+			$scope.users[userId] = {
+				firstname:$scope.firstname,
+				lastname:$scope.lastname,
+				institution:$scope.institution,
+			}
+			$scope.users.$save()
+	}
 })
 
 .controller('NewGameController', function($scope) {
