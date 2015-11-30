@@ -86,7 +86,7 @@ body {
     padding:10px;
 }
 #content {
-    padding-bottom:100px; /* Height of the footer element */
+    padding-bottom:50px; /* Height of the footer element */
 }
 #footer {
     background:#363636;

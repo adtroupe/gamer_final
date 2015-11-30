@@ -1,7 +1,7 @@
 <div class="container" ng-app="myApp" ng-controller="myCtrl">
 	<div class="row" id="profile-info">
 		<div class="col-md-12">
-			<h1>John Smith</h1>
+			<h1>{{users[userId].firstname}} {{users[userId].lastname}}</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -40,24 +40,24 @@
 
 		<div class='modal-content'>
 			<div class='modal-header'>
-				<button type='button' class='btn btn-warning' id='modalCloseButton'>X</button>
+				<button ng-click='closeModal()' type='button' class='btn btn-warning' id='modalCloseButton'>X</button>
 				<h2>Profile Information</h2>
 			</div>
 			<div class='modal-body'>
 				<form>
 					<div class='form-group'>
 						<label for='firstname'>First Name:</label>
-						<input ng-model='firstname' class='form-control' type='text' name='firstname' id='firstname'/>
+						<input ng-model='firstname' class='form-control' type='text' name='firstname' id='firstname' value='{{users[userId].firstname}}'/>
 					</div>
 					<div class='form-group'>
 						<label for='lastname'>Last Name:</label>
-						<input ng-model='lastname' class='form-control' type='text' name='lastname' id='lastname'/>
+						<input ng-model='lastname' class='form-control' type='text' name='lastname' id='lastname' value='{{users[userId].lastname}}'/>
 					</div>
 					<div class='form-group'>
 						<label for='institution'>Institution:</label>
-						<input ng-model='institution' class='form-control' type='text' name='institution' id='institution'/>
+						<input ng-model='institution' class='form-control' type='text' name='institution' id='institution' value='{{users[userId].institution}}'/>
 					</div>
-					<button ng-click='updateProfile()' type='submit' class='btn btn-warning'>Update Profile</button>
+					<button ng-click='updateProfile()' type='submit' class='btn btn-warning'>Change/Update Profile</button>
 				</form>
 			</div>
 		</div>
