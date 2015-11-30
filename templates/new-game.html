@@ -194,7 +194,25 @@ Agent note
         <div class="form-group">
             <label class="control-label col-sm-2" for="pacing">Pacing:</label>
             <div class="col-sm-10">
-                <input type="title" class="form-control" id="pacing" placeholder="Enter Pacing">
+                <select class="form-control" id="battleSystems" placeholder="Battle System">
+                    <option></option>
+                    <option>Turn-based</option>
+                    <option>Real-time</option>
+                    <option>Other</option>
+                </select>
+                <select class="form-control" id="inGameClock" placeholder="In-game Clock">
+                    <option></option>
+                    <option>Calendar-based</option>
+                    <option>Multiple game clocks</option>
+                    <option>Timed action</option>
+                    <option>Continuous</option>
+                    <option>Other</option>
+                </select>
+                <select class="form-control" id="inGameClock" placeholder="">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
             </div>
         </div>
 
@@ -202,7 +220,13 @@ Agent note
         <div class="form-group">
             <label class="control-label col-sm-2" for="progression">Progression:</label>
             <div class="col-sm-10">
-                <input type="title" class="form-control" id="progression" placeholder="Enter Progression">
+                <select class="form-control" id="progression">
+                    <option></option>
+                    <option>Linear</option>
+                    <option>Branching</option>
+                    <option>Open world</option>
+                    <option>Other</option>
+                </select>
             </div>
         </div>
 
@@ -522,7 +546,7 @@ Agent note
         <div class="form-group">
             <label class="control-label col-sm-2" for="agentNote">Agent Note:</label>
             <div class="col-sm-10">
-                <input type="title" class="form-control" id="agentNote" placeholder="Enter Agent Note">
+                <input type="title" class="form-control" id="agentNote" placeholder="Enter Agent">
             </div>
         </div>
 
