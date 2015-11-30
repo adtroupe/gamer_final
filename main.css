@@ -89,6 +89,26 @@ body {
     padding: 1em;
 }
 
+#profile-info {
+	background-color: #292929;
+	background-image: url('http://gamer.ischool.uw.edu/wp-content/themes/gamer-theme/background.png');
+	margin-top: 2em;
+}
+
+#profile-info h1 {
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#profile-info p {
+	color: #ff581c;
+}
+
+#added-games {
+	padding-top: 2em;
+	background-color: #F7F7F7;
+}
+
 @media screen and (min-width: 768px) {
     .container h1 {
         font-size: 72px;
