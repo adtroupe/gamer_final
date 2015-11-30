@@ -33,7 +33,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 myApp.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.when('','/')
 	$stateProvider.state('profile', {
-		url: '/',
+		url: '/profile',
 		templateUrl: 'templates/profile.html',
 		controller: 'ProfileController',
 	})
