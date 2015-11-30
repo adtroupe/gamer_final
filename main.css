@@ -4,6 +4,11 @@
 body {
     color: white;
     background-color: black;
+
+    /* FOOTER FIX */
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 .container h1 {
@@ -39,14 +44,16 @@ body {
 
 #logOutButton {
     float: right;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 #changingContent {
     margin-top: 50px;
 }
 
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 /*.container button {*/
     /*background-color: #FF4500;*/
     /*color: white;*/
@@ -60,11 +67,6 @@ body {
 }
 
 /*copy and paste below */
-body {
-    margin:0;
-    padding:0;
-    height:100%;
-}
 #wrapper {
     min-height:100%;
     position:relative;
