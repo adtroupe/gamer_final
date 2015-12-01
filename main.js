@@ -101,5 +101,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 })
 
 .controller('NewGameController', function($scope) {
-	
+	$(document).ready(function() {
+    	$('[data-toggle="popover"]').popover();   
+	});
 })
