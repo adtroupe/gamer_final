@@ -4,7 +4,7 @@
 			<h1 ng-show='!users[userId]'>Welcome User</h1>			
 			<div ng-show='users[userId]'>
 				<h1>{{users[userId].firstname}} {{users[userId].lastname}}</h1>
-				<p>{{users[userId].institution}}</p>
+				<h2>{{users[userId].institution}}</h2>
 				<p>Profile updated on: {{users[userId].dateupdated}}</p>
 			</div>
 		</div>
@@ -18,16 +18,22 @@
 			    	<th>#</th>
 			    	<th>Name of Game</th>
 			    	<th>Date added</th>
+					<th>View</th>
+					<th>Edit</th>
 			    </tr>
 			    <tr>
 				    <td>1</td>
 				    <td>game</td>		
 				   	<td>time</td>
+					<td>view</td>
+					<td>edit</td>
 				</tr>
 				<tr>
 				    <td>2</td>
 				    <td>game</td>		
 				   	<td>time</td>
+					<td>view</td>
+					<td>edit</td>
 				</tr>
 			  </table>
 		</div>
