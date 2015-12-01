@@ -69,6 +69,11 @@ div.container {
     float: right;
 }
 
+.form-group input, .form-group select, .form-group textarea {
+    background-color: #363636;
+    color: white;
+    border-color: #363636;
+}
 /*.container button {*/
     /*background-color: #FF4500;*/
     /*color: white;*/
@@ -86,7 +91,7 @@ div.container {
     position:relative;
 }
 #header {
-    background:#ededed;
+    background: black;
     padding:10px;
 }
 #content {
