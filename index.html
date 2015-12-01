@@ -66,6 +66,7 @@
                         <div class='navbar-header'> 
                             <a ui-sref='profile' type='button' class='navbarLink'>Profile</a>
                             <a ui-sref='form' type='button' class='navbarLink'>Add Game</a>
+                            <button ng-click='openAccountModal()' type='button' class='btn btn-warning' data-toggle='modal' data-target='#changeAccountSettings'>Account Settings</button>
                             <button ng-click='logOut()' type='button' class='btn btn-warning' id='logOutButton'>Log Out</button>
                         </div>
                     </div>
@@ -75,6 +76,54 @@
 
         </div>
 
+        <div id='changeAccountSettings' class='modal fade' role='dialog'>
+			<div class='modal-dialog'>
+
+				<div class='modal-content'>
+					<div class='modal-header'>
+						<button ng-click='closeAccountModal()' type='button' class='btn btn-warning' id='modalCloseButton'>X</button>
+						<h2>Account Settings</h2>
+					</div>
+					<div class='modal-body'>
+						<div>
+							<form>
+								<input type='radio' name='changing' ng-model='changing' value='email' id='changeEmail' checked />
+								<label for='changeEmail'>Change Email Address</label>
+								<input type='radio' name='changing' ng-model='changing' value='password' id='changePassword' /> 
+								<label for='changePassword'>Change Password</label>
+							</form>
+						</div>
+						<form name='changeEmailForm' ng-show='changing == email' novalidate>
+							<div class='form-group'>
+								<label for='currentEmail'>Current Email:</label>
+								<input ng-model='currentEmail' class='form-control' type='email' name='currentEmail' id='currentEmail' ng-required='true' />
+								<p ng-show='changeEmailForm.currentEmail.$error.email' class='help-block'>Not an email</p>
+							</div>
+							<div class='form-group'>
+								<label for='newEmail1'>New Email:</label>
+								<input ng-model='newEmail1' class='form-control' type='email' name='newEmail1' id='newEmail1' ng-required='true' />
+								<p ng-show='changeEmailForm.newEmail1.$error.email' class='help-block'>Not an email</p>
+							</div>
+							<div class='form-group'>
+								<label for='newEmail2'>Confirm New Email:</label>
+								<input ng-model='newEmail2' class='form-control' type='email' name='newEmail2' id='newEmail2' ng-required='true' />
+								<p ng-show='newEmail1 != newEmail2' class='help-block'>Addresses do not match</p>
+								<p ng-show='changeEmailForm.newEmail2.$error.email' class='help-block'>Not an email</p>
+							</div>
+							<div class='form-group'>
+								<label for='changeEmailPW'>Password:</label>
+								<input ng-model='changeEmailPW' class='form-control' type='password' name='changeEmailPW' id='changeEmailPW' ng-required='true' />
+							</div>							
+							<button ng-click='changeUserEmail()' ng-disabled='newEmail1 != newEmail2 || changeEmailForm.$invalid' type='submit' class='btn btn-warning'>Change Email</button>
+						</form>
+						<form name='changePasswordForm' ng-show='changing == password' novalidate />
+
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
 
 
 		<div id='footer'>

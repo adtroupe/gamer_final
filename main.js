@@ -32,6 +32,27 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 		})
 	}
 
+	$scope.changeUserEmail = function() {
+		ref.changeEmail({
+			oldEmail: $scope.currentEmail,
+			newEmail: $scope.newEmail1,
+			password: $scope.changeEmailPW
+		}, function(error) {
+			if (error === null) {
+				$scope.authData.password.email = $scope.newEmail1;
+				$scope.currentEmail = '';
+				$scope.newEmail1 = '';
+				$scope.newEmail2 = '';
+				$scope.changeEmailPW = '';
+			} 
+		})
+		$scope.closeAccountModal;
+	};
+
+	$scope.closeAccountModal = function() {
+		$('#changeAccountSettings').modal('hide');
+	};
+
 	$scope.logOut = function() {
 		$scope.authObj.$unauth()
 		$scope.userId = false
@@ -54,24 +75,25 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 })
 
 .controller('ProfileController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
-	if($scope.authData) {
-		// $scope.ref.once('value', function(snapshot) {
-		// 	$scope.currentUsers = snapshot.val();
-		// 	$scope.currentUserInfo = snapshot.val().users[$scope.userId];
-			
-		// })
-	}
-
 	$scope.updateProfile = function() {
-			// var userId = $scope.authData.uid;
-			$scope.users[$scope.userId] = {
-				firstname:$scope.firstname,
-				lastname:$scope.lastname,
-				institution:$scope.institution,
-			}
-			$scope.users.$save()
-			.then($scope.closeModal)
+		$scope.users[$scope.userId] = {
+			firstname:$scope.firstname,
+			lastname:$scope.lastname,
+			institution:$scope.institution,
+			dateupdated: new Date().toString().split(' ').splice(1,3).join(' '),
+		}
+		$scope.users.$save()
+		.then($scope.closeModal)
 	};
+
+	$scope.openModalButton = function() {
+		var userBase = $scope.users[$scope.userId];
+		if (userBase !== undefined) {
+			$scope.firstname = userBase.firstname;
+			$scope.lastname = userBase.lastname;
+			$scope.institution = userBase.institution;
+		}	
+	}
 
 	$scope.closeModal = function() {
 		$('#changeUserInfo').modal('hide');

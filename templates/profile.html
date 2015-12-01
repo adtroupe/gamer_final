@@ -1,15 +1,14 @@
 <div class="container" ng-app="myApp" ng-controller="myCtrl">
 	<div class="row" id="profile-info">
 		<div class="col-md-12">
-			<h2>{{users[userId].firstname}} {{users[userId].lastname}}</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h1 ng-show='!users[userId]'>Welcome User</h1>			
+			<div ng-show='users[userId]'>
+				<h1>{{users[userId].firstname}} {{users[userId].lastname}}</h1>
+				<p>{{users[userId].institution}}</p>
+				<p>Profile updated on: {{users[userId].dateupdated}}</p>
+			</div>
 		</div>
-		<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#changeUserInfo'>Change/Update Profile</button>
+		<button ng-click='openModalButton()' type='button' class='btn btn-warning' data-toggle='modal' data-target='#changeUserInfo'>Update Profile</button>
 	</div>
 	<div class="row" id="added-games">
 		<div class="col-md-12">
@@ -47,15 +46,15 @@
 				<form>
 					<div class='form-group'>
 						<label for='firstname'>First Name:</label>
-						<input ng-model='firstname' class='form-control' type='text' name='firstname' id='firstname' value='{{users[userId].firstname}}'/>
+						<input ng-model='firstname' class='form-control' type='text' name='firstname' id='firstname' />
 					</div>
 					<div class='form-group'>
 						<label for='lastname'>Last Name:</label>
-						<input ng-model='lastname' class='form-control' type='text' name='lastname' id='lastname' value='{{users[userId].lastname}}'/>
+						<input ng-model='lastname' class='form-control' type='text' name='lastname' id='lastname' />
 					</div>
 					<div class='form-group'>
 						<label for='institution'>Institution:</label>
-						<input ng-model='institution' class='form-control' type='text' name='institution' id='institution' value='{{users[userId].institution}}'/>
+						<input ng-model='institution' class='form-control' type='text' name='institution' id='institution' />
 					</div>
 					<button ng-click='updateProfile()' type='submit' class='btn btn-warning'>Change/Update Profile</button>
 				</form>
