@@ -27,11 +27,17 @@ body {
 .navbar {
     min-height: inherit;
     background-color: #363636;
-    border-bottom: 3px solid #FF4500;
+    border-top: 3px solid #FF4500;
+    border-bottom: none;
 }
 
 .navbar-header {
     float: none;
+}
+
+.navbarLink {
+    padding: 1em;
+    margin-top: 2em;
 }
 
 .navbarLink:link, .navbarLink:visited {
@@ -44,6 +50,9 @@ body {
 
 #logOutButton {
     float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Droid Sans', sans-serif;
 }
 
 #changingContent {
@@ -59,19 +68,13 @@ body {
     float: right;
 }
 
-.btn {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-family: 'Droid Sans', sans-serif;
-}
 /*.container button {*/
     /*background-color: #FF4500;*/
     /*color: white;*/
 /*}*/
 
 .container {
-    background-color: #363636;
-    /*   background-image: url("img/composite grid.jpg");*/
+    background-image: url('http://gamer.ischool.uw.edu/wp-content/themes/gamer-theme/background.png');
     padding: 3em;
     margin: 3em;
 }
@@ -107,7 +110,7 @@ body {
 
 #profile-info h1 {
 	color: white;
-	font-family: 'Press Start 2P', cursive;
+    font-family: 'Droid Sans', sans-serif;
 }
 
 #profile-info p {
