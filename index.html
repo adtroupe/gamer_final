@@ -52,10 +52,10 @@
 						<p ng-show='logInForm.password.$error.minlength' class='help-block'>Password is too short</p>
 					</div>
 					<div>
-
-<!-- 						<button  ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button> -->
-
 						<button ng-click='signIn()' ng-disabled='logInForm.$invalid' type='submit' class='btn btn-success form-control'>Sign-In</button>
+					</div>
+					<div ng-show='logInFailureMessage && logInFailureMessage != ""'>
+						<p>{{logInFailureMessage}}</p>
 					</div>
 				</form>
 			</div>
@@ -66,14 +66,15 @@
                         <div class='navbar-header'> 
                             <button ui-sref='profile' type='button' class='navbarLink btn btn-warning'>Profile</button>
                             <button ui-sref='form' type='button' class='navbarLink btn btn-warning'>Add Game</a>
-                            <button ng-click='openAccountModal()' type='button' class='btn btn-warning' data-toggle='modal' data-target='#changeAccountSettings'>Account Settings</button>
                             <button ng-click='logOut()' type='button' class='btn btn-warning' id='logOutButton'>Log Out</button>
+                            <button ng-click='openAccountModal()' type='button' class='btn btn-warning' data-toggle='modal' data-target='#changeAccountSettings' id='accountSettingsButton'>
+                            	<svg id='settingsIcon' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"><path d="M20,14.5v-2.9l-1.8-0.3c-0.1-0.4-0.3-0.8-0.6-1.4l1.1-1.5l-2.1-2.1l-1.5,1.1c-0.5-0.3-1-0.5-1.4-0.6L13.5,5h-2.9l-0.3,1.8C9.8,6.9,9.4,7.1,8.9,7.4L7.4,6.3L5.3,8.4l1,1.5c-0.3,0.5-0.4,0.9-0.6,1.4L4,11.5v2.9l1.8,0.3c0.1,0.5,0.3,0.9,0.6,1.4l-1,1.5l2.1,2.1l1.5-1c0.4,0.2,0.9,0.4,1.4,0.6l0.3,1.8h3l0.3-1.8c0.5-0.1,0.9-0.3,1.4-0.6l1.5,1.1l2.1-2.1l-1.1-1.5c0.3-0.5,0.5-1,0.6-1.4L20,14.5z M12,16c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S13.7,16,12,16z"/></svg>
+							</button>                            
                         </div>
                     </div>
                 </nav>
                 <div id='changingContent' ui-view></div>
             </div>
-
         </div>
 
         <div id='changeAccountSettings' class='modal fade' role='dialog'>
@@ -87,13 +88,32 @@
 					<div class='modal-body'>
 						<div>
 							<form>
-								<input type='radio' name='changing' ng-model='changing' value='email' id='changeEmail' checked />
+								<input type='radio' name='changing' ng-model='changing' value='profile' id='changeProfile' ng-checked='true'/>
+								<label for='changeProfile'>Change Profile</label>
+								<input type='radio' name='changing' ng-model='changing' value='email' id='changeEmail'  />
 								<label for='changeEmail'>Change Email Address</label>
 								<input type='radio' name='changing' ng-model='changing' value='password' id='changePassword' /> 
 								<label for='changePassword'>Change Password</label>
 							</form>
 						</div>
-						<form name='changeEmailForm' ng-show='changing == email' novalidate>
+
+						<form name='changeProfile' ng-show='changing == "profile"' novalidate>
+							<div class='form-group'>
+								<label for='firstname'>First Name:</label>
+								<input ng-model='firstname' class='form-control' type='text' name='firstname' id='firstname' />
+							</div>
+							<div class='form-group'>
+								<label for='lastname'>Last Name:</label>
+								<input ng-model='lastname' class='form-control' type='text' name='lastname' id='lastname' ng-minlength='1' />
+							</div>
+							<div class='form-group'>
+								<label for='institution'>Institution:</label>
+								<input ng-model='institution' class='form-control' type='text' name='institution' id='institution' />
+							</div>
+							<button ng-click='updateProfile()' type='submit' class='btn btn-warning form-control'>Update Profile</button>
+						</form>
+
+						<form name='changeEmailForm' ng-show='changing == "email"' novalidate>
 							<div class='form-group'>
 								<label for='currentEmail'>Current Email:</label>
 								<input ng-model='currentEmail' class='form-control' type='email' name='currentEmail' id='currentEmail' ng-required='true' />
@@ -114,17 +134,41 @@
 								<label for='changeEmailPW'>Password:</label>
 								<input ng-model='changeEmailPW' class='form-control' type='password' name='changeEmailPW' id='changeEmailPW' ng-required='true' />
 							</div>							
-							<button ng-click='changeUserEmail()' ng-disabled='newEmail1 != newEmail2 || changeEmailForm.$invalid' type='submit' class='btn btn-warning'>Change Email</button>
+							<button ng-click='changeUserEmail()' ng-disabled='newEmail1 != newEmail2 || changeEmailForm.$invalid' type='submit' class='btn btn-warning form-control'>Change Email</button>
 						</form>
-						<form name='changePasswordForm' ng-show='changing == password' novalidate />
 
+						<form name='changePasswordForm' ng-show='changing == "password"' novalidate />
+							<div class='form-group'>
+								<label for='emailPW'>Email:</label>
+								<input ng-model='emailPW' class='form-control' type='email' name='emailPW' id='emailPW' ng-required='true' />
+								<p ng-show='changePasswordForm.emailPW.$error.email' class='help-block'>Not an email</p>
+							</div>
+							<div class='form-group'>
+								<label for='currentPassword'>Current Password:</label>
+								<input ng-model='currentPassword' class='form-control' type='password' name='currentPassword' id='currentPassword' ng-required='true' />
+								<p class='help-block'></p>
+							</div>
+							<div class='form-group'>
+								<label for='newPassword1'>New Password:</label>
+								<input ng-model='newPassword1' class='form-control' type='password' name='newPassword1' id='newPassword1' ng-required='true' ng-minlength='6' />
+								<p ng-show='changePasswordForm.newPassword1.$error.minlength' class='help-block'>Password is too short</p>
+							</div>
+							<div class='form-group'>
+								<label for='newPassword2'>Confirm New Password:</label>
+								<input ng-model='newPassword2' class='form-control' type='password' name='newPassword2' id='newPassword2' ng-required='true' ng-minlength='6' />
+								<p ng-show='changePasswordForm.newPassword2.$error.minlength' class='help-block'>Password is too short</p>
+								<p ng-show='newPassword1 != newPassword2' class='help-block'>New passwords do not match</p>
+							</div>
+							<button ng-click='changeUserPassword()' ng-disabled='newPassword1 != newPassword2 || changePasswordForm.$invalid' type='submit' class='btn btn-warning form-control'>Change Password</button>
 						</form>
+					</div>
+					<div class='modal-footer' ng-show='changeInfoWarning'>
+						<p>{{changeInfoWarning}}</p>
 					</div>
 				</div>
 
 			</div>
 		</div>
-
 
 		<div id='footer'>
 			Copyright &copy; 2015 GAMER Group

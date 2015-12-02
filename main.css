@@ -47,7 +47,16 @@ div.container {
     color: #FF4500;
 }
 
-#logOutButton {
+#settingsIcon {
+    height: 2em;
+    fill: white;
+}
+
+#accountSettingsButton {
+    padding: 2px 10px;
+}
+
+#logOutButton, #accountSettingsButton {
     float: right;
     font-family: 'Droid Sans', sans-serif;
 }
@@ -61,7 +70,7 @@ div.container {
 }
 
 .modal-content {
-    background-color: #363636;
+    background-color: black;
 }
 
 #modalCloseButton {
