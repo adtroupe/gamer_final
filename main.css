@@ -148,6 +148,27 @@ div.container {
     }
 }
 
+.form-group span, span:hover {
+    font-weight: bold;
+    color: #ff581c;
+}
+
+.popover-title {
+    background-color: #ff581c;
+    border: none;
+    font-size: 1.25em;
+    color: white;
+}
+
+.popover {
+    background-color: black;
+    color: #a7a4a4;
+}
+
+.popover.right .arrow:after {
+    border-right-color: #363636;
+}
+
 @media screen and (min-width: 1200px) {
     .container h1 {
         font-size: 100px;
