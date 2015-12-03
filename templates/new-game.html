@@ -60,741 +60,787 @@ Agent note
 -->
 
 <div>
-    <form class="form-horizontal" role="form">
+    <form data-parsley-validate class="form-horizontal" role="form">
     <!-- Required -->
+    <!-- Game Title -->
+        <div class="form-selection">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gameTitle">Game Title *:</label>
+                <div class="col-sm-8">
+                    <a href="#" data-toggle="tooltip" title="Please enter the full title">
+                    <input type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title"></a>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Game Title" data-content="Transcribed title: Transcribe the title as it appears on the Chief Source
+                    of Information (CSI).3 When different titles are used in the CSI,
+                    transcribe the most prominently displayed title. When it is unclear which
+                    title is most prominent, transcribe the most frequently occuring iteration
+                    of the title used in the CSI.
+                    Enter variant titles under â€œAlternative titleâ€?. Enter commonly used
+                    shortened versions of transcribed titles under â€œAbbreviated titleâ€?. For
+                    titles commonly used in conversation, use â€œColloquial titleâ€?.
+                    When the title is in a language other than English, transcribe it in the
+                    original language. When the title is written in multiple languages,
+                    transcribe it as it appears in those languages.
+                    When there is no title, or the title is unknown, specify â€œunknownâ€?. Do
+                    not correct errors, if any, but denote the errors with [sic]. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
 
-        <!-- Game Title -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="gameTitle">Game Title *:</label>
-            <div class="col-sm-8">
-                <a href="#" data-toggle="tooltip" title="Please enter the full title">
-                <input type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title"></a>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Game Title" data-content="Transcribed title: Transcribe the title as it appears on the Chief Source
-                of Information (CSI).3 When different titles are used in the CSI,
-                transcribe the most prominently displayed title. When it is unclear which
-                title is most prominent, transcribe the most frequently occuring iteration
-                of the title used in the CSI.
-                Enter variant titles under â€œAlternative titleâ€?. Enter commonly used
-                shortened versions of transcribed titles under â€œAbbreviated titleâ€?. For
-                titles commonly used in conversation, use â€œColloquial titleâ€?.
-                When the title is in a language other than English, transcribe it in the
-                original language. When the title is written in multiple languages,
-                transcribe it as it appears in those languages.
-                When there is no title, or the title is unknown, specify â€œunknownâ€?. Do
-                not correct errors, if any, but denote the errors with [sic]. "><span class="glyphicons glyphicons-plus">+</span></a>
+            <!-- Gameplay Genre -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gameplayGenre">Gameplay Genre *:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Genre" data-content="Determine gameplay genre from the primary and secondary CSI. Select
+                    the most appropriate term(s) from the controlled vocabulary at the most
+                    specific level possible. Select up to three terms.  "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Platform -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="platform">Platform *:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="platform" placeholder="Enter Platform">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Platform" data-content="The hardware and operating system on which the video game was
+                    designed to be played. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Number of Players -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="sell">Number of Players *:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="sell">
+                        <option>1</option>
+                        <option>1-2</option>
+                        <option>1-2 [local cooperative]</option>
+                        <option>1-2 [online competitive]</option>
+                        <option>1-4</option>
+                        <option>1-4 [local cooperative]</option>
+                        <option>1-4 [online competitive]</option>
+                        <option>1-8</option>
+                        <option>1-8 [local cooperative]</option>
+                        <option>1-8 [online competitive]</option>
+                        <option>1-many</option>
+                        <option>1-many [local cooperative]</option>
+                        <option>1-many [online competitive]</option>
+                        <option>unknown</option>
+                    </select>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Number of Players" data-content="Determine the number of players based on the CSI. Indicate in the field
+                    the maximum range of concurrent players (e.g. 1, 1-2, 1-8). If the video
+                    game is massively multiplayer, indicate '1-many' in the field. If the
+                    video game has additional modes (e.g. local or online competitive/
+                    cooperative modes) record the number of players for those modes by
+                    repeating the element. If the number of players is unknown, record
+                    â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!--Region Code -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="regionCode">Region Code *:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="regionCode" placeholder="Enter Region Code">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Region Code" data-content="Transcribe the region code(s) as they appear on the CSI. On physical
+                    cases, they may be located on the back or spine of the case. On physical
+                    discs or cartridges, they may be located on the front side of the medium.
+                    If the secondary sources confirm that the item is not region-specific,
+                    record â€œregion-freeâ€?. If the classification code is unknown, record
+                    â€œunknownâ€? ."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Format -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="sell">Format *:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="sell">
+                        <option>cartridge</option>
+                        <option>optical</option>
+                        <option>magnetic</option>
+                        <option>unknown</option>
+                    </select>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Format" data-content="Determine the media format by examining the physical object. Select
+                    the most appropriate format from the following list: cartridge, optical,
+                    magnetic, unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Retail Release Date -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="retailRelease">Retail Release Date *:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Retail Release Date" data-content="Determine the release date from the CSI, and record it following the
+                    ISO 8601 Standard8
+                    (i.e., YYYY-MM-DD) with the source and the date
+                    when this information was acquired. If unknown, record â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Corporate Body -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="corporateBody">Corporate Body *:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Corporate Body" data-content="Determine the responsible corporate body by consulting the CSI. If
+                    available, record the full name of the corporate body. Transcribe the
+                    information as it appears in the CSI and denote as [transcribed]. If the
+                    corporate body information is not available, record â€œunknownâ€?. Select
+                    and specify the role of the corporate body along with the name of the
+                    corporate body: developer, publisher, distributor, licensor, or licensee.
+                    When the role of the corporate body is unknown, record â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Gameplay Genre -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="gameplayGenre">Gameplay Genre *:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Genre" data-content="Determine gameplay genre from the primary and secondary CSI. Select
-                the most appropriate term(s) from the controlled vocabulary at the most
-                specific level possible. Select up to three terms.  "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
+        <!-- Everything else -->
 
-        <!-- Platform -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="platform">Platform *:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="platform" placeholder="Enter Platform">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Platform" data-content="The hardware and operating system on which the video game was
-                designed to be played. "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
+        <!--Game Entity -->
 
-        <!-- Number of Players -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="sell">Number of Players *:</label>
-            <div class="col-sm-10">
-                <select class="form-control" id="sell">
-                    <option>1</option>
-                    <option>1-2</option>
-                    <option>1-2 [local cooperative]</option>
-                    <option>1-2 [online competitive]</option>
-                    <option>1-4</option>
-                    <option>1-4 [local cooperative]</option>
-                    <option>1-4 [online competitive]</option>
-                    <option>1-8</option>
-                    <option>1-8 [local cooperative]</option>
-                    <option>1-8 [online competitive]</option>
-                    <option>1-many</option>
-                    <option>1-many [local cooperative]</option>
-                    <option>1-many [online competitive]</option>
-                    <option>unknown</option>
-                </select>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Number of Players" data-content="Determine the number of players based on the CSI. Indicate in the field
-                the maximum range of concurrent players (e.g. 1, 1-2, 1-8). If the video
-                game is massively multiplayer, indicate '1-many' in the field. If the
-                video game has additional modes (e.g. local or online competitive/
-                cooperative modes) record the number of players for those modes by
-                repeating the element. If the number of players is unknown, record
-                â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!--Region Code -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="regionCode">Region Code *:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="regionCode" placeholder="Enter Region Code">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Region Code" data-content="Transcribe the region code(s) as they appear on the CSI. On physical
-                cases, they may be located on the back or spine of the case. On physical
-                discs or cartridges, they may be located on the front side of the medium.
-                If the secondary sources confirm that the item is not region-specific,
-                record â€œregion-freeâ€?. If the classification code is unknown, record
-                â€œunknownâ€? ."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Format -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="sell">Format *:</label>
-            <div class="col-sm-10">
-                <select class="form-control" id="sell">
-                    <option>cartridge</option>
-                    <option>optical</option>
-                    <option>magnetic</option>
-                    <option>unknown</option>
-                </select>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Format" data-content="Determine the media format by examining the physical object. Select
-                the most appropriate format from the following list: cartridge, optical,
-                magnetic, unknown."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Retail Release Date -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="retailRelease">Retail Release Date *:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Retail Release Date" data-content="Determine the release date from the CSI, and record it following the
-                ISO 8601 Standard8
-                (i.e., YYYY-MM-DD) with the source and the date
-                when this information was acquired. If unknown, record â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Corporate Body -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="corporateBody">Corporate Body *:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Corporate Body" data-content="Determine the responsible corporate body by consulting the CSI. If
-                available, record the full name of the corporate body. Transcribe the
-                information as it appears in the CSI and denote as [transcribed]. If the
-                corporate body information is not available, record â€œunknownâ€?. Select
-                and specify the role of the corporate body along with the name of the
-                corporate body: developer, publisher, distributor, licensor, or licensee.
-                When the role of the corporate body is unknown, record â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-    <!-- Everything else -->
+        <div class="form-selection">
 
         <!-- Narrative Genre -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="corporateBody">Narrative Genre:</label>
-            <div class="col-sm-10">
-                <select multiple type="title" class="form-control" id="narrativeGenre">
-                </select multiple>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Narrative Genre" data-content="Determine narrative genre from the CSI. Select the most appropriate
-                term(s) from the controlled vocabulary at the most specific level
-                possible. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+       
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="corporateBody">Narrative Genre:</label>
+                <div class="col-sm-10">
+                    <select multiple type="title" class="form-control" id="narrativeGenre">
+                    </select multiple>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Narrative Genre" data-content="Determine narrative genre from the CSI. Select the most appropriate
+                    term(s) from the controlled vocabulary at the most specific level
+                    possible. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="corporateBody">Summary:</label>
+                <div class="col-sm-10">
+                    <textarea type="title" class="form-control" id="summary" placeholder="Enter Summary"></textarea>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Summary" data-content="Write a brief summary of the video game's narrative and/or main
+                    features in a free text form."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Theme -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="theme">Theme:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Theme" data-content="Determine the theme from the primary and secondary CSI. Select the
+                    most appropriate terms from the controlled vocabulary. Select as many
+                    terms as necessary. If no themes are applicable, record â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Setting -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="setting">Setting:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="setting" placeholder="Enter Setting">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Setting" data-content="Determine the type of world, location, time period from the primary
+                    and secondary CSI. Select the most appropriate term(s) from the
+                    controlled vocabulary for the three attributes. Select up to three terms
+                    for each attribute. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Mood -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="mood">Mood:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="mood" placeholder="Enter Mood">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Mood" data-content="Identify the prevailing mood(s) of the video game according to the CSI;
+                    generally, the experience of playing or watching a gameplay video may
+                    be the most reliable source of this information. Select the most
+                    appropriate term(s) from the controlled vocabulary for this element. If
+                    no mood is applicable, record â€œN/Aâ€?. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Pacing -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pacing">Pacing:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="battleSystems" placeholder="Battle System">
+                        <option></option>
+                        <option>Turn-based</option>
+                        <option>Real-time</option>
+                        <option>Other</option>
+                    </select>
+                    <select class="form-control" id="inGameClock" placeholder="In-game Clock">
+                        <option></option>
+                        <option>Calendar-based</option>
+                        <option>Multiple game clocks</option>
+                        <option>Timed action</option>
+                        <option>Continuous</option>
+                        <option>Other</option>
+                    </select>
+                    <select class="form-control" id="inGameClock" placeholder="">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Pacing" data-content="Determine the pacing information from the CSI. This information will
+                    most likely come from firsthand experience of gameplay. If firsthand
+                    experience is not possible, consult secondary sources.
+                    When applicable, determine the pacing information for each of the
+                    following three attributes: â€œbattle system (i.e., how time flows during ingame
+                    battles)â€?, â€œin-game clock (i.e., how time flows in the game
+                    world)â€?, and â€œtime manipulation (i.e., the ability to stop and/or alter
+                    time or the flow of time in any way)â€?. Select the most appropriate
+                    term(s) from the options given below. Multiple terms can be selected
+                    for the first two attributes, if applicable."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Progression -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="progression">Progression:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="progression">
+                        <option></option>
+                        <option>Linear</option>
+                        <option>Branching</option>
+                        <option>Open world</option>
+                        <option>Other</option>
+                    </select>
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Progression" data-content="Determine the manner in which the character progresses through the
+                    video game. â€œLinearâ€? means there is one general path from the
+                    beginning to end. â€œBranchingâ€? means the play progresses through a
+                    branching tree of options, or players may choose which branch(es) to
+                    complete the video game in an order they choose. â€œOpen worldâ€? means
+                    the player has great agency to explore the game world freely and
+                    progress at their own pace. Record â€œotherâ€? for types of progression not
+                    outlined above. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Tropes -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="tropes">Tropes:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="tropes" placeholder="Enter Tropes">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Tropes" data-content="Identify the key tropes of the video game according to the CSI, and
+                    other reference sources (e.g., reviews, critiques, walkthroughs, or
+                    guides). Generally, the experience of playing the video game may be the
+                    most reliable source, as tropes are often detailed video.
+                    There are two cateogires of tropes: character tropes and narrative
+                    tropes. Select the most appropriate term(s) from the controlled
+                    vocabulary for this element. Select as many terms as necessary. If no
+                    tropes are applicable, record â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Packshot -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="packshot">Packshot:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="packshot" placeholder="Enter Packshot">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Packshot" data-content="If available, record a packshot of the video game licensed for use by
+                    your organization or in the public domain. Create and preserve a copy
+                    of the image according to your organizationâ€™s standards. Upload or
+                    indicate the location of the image according to your organization's
+                    system design."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Game Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gameNote">Game Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="gameNote" placeholder="Enter Game Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Game Note" data-content="Record notable or unique characteristics of the video game, not
+                    captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Summary -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="corporateBody">Summary:</label>
-            <div class="col-sm-10">
-                <textarea type="title" class="form-control" id="summary" placeholder="Enter Summary"></textarea>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Summary" data-content="Write a brief summary of the video game's narrative and/or main
-                features in a free text form."><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Platform Edition Entity -->
+        <div class="form-selection">
+
+            <!-- Edition Information -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="editionInformation">Edition Information:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="editionInformation" placeholder="Enter Edition Information">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Edition Information" data-content="Transcribe the edition information as it appears on the CSI, if
+                    applicable. If there is no edition information, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- System Requirements -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="theme">Theme:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="System Requirements" data-content="Determine system requirements from CSI. If applicable, describe
+                    â€œminimumâ€? and â€œrecommendedâ€? requirements."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Special Hardware -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="specialHardware">Special Hardware:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="specialHardware" placeholder="Enter Special Hardware">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Special Hardware" data-content="Transcribe the required and/or recommended special hardware as it
+                    appears in the CSI. In many cases, this information can be identified on
+                    the CSI as â€œcompatibleâ€? hardware."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Networked Features -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="networkedFeatures">Networked Features:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="networkedFeatures" placeholder="Enter Networked Features">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Networked Features" data-content="Transcribe the networked features as they appear on CSI. If the video
+                    game does not offer any networked features, record â€œNoneâ€?. If the
+                    information cannot be determined with certainty, enter the value as
+                    â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Connectivity -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="connectivity">Connectivity:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="connectivity" placeholder="Enter Connectivity">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Connectivity" data-content="Where applicable, specify connectivity information for the following
+                    three attributes: method, network type, and bandwidth. Select terms
+                    from the options listed below."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Type of Ending -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="typeOfEnding">Type of Ending:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="theme" placeholder="Enter Type of Ending">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Type of Ending" data-content="Determine and specify the ending information from the CSI (â€œOver 80
+                    possible endingsâ€?, â€œNew Game+ featureâ€?, etc.).
+                    Record values for the following three attributes: does it end? (Y/N);
+                    does it have multiple endings? (Y/N); is there any post-game content or
+                    options? (Y/N)"><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Estimated Time of Completion -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="estimatedTimeOfCompletion">Estimated Time of Completion:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="estimatedTimeOfCompletion" placeholder="Enter Theme">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Estimated Time of Completion" data-content="Determine the information from the CSI. GameFaqs.com and/or
+                    howlongtobeat.com may be particularly useful for sourcing this
+                    information.
+                    Use the attribute â€œmainâ€? to record the estimated amount of time
+                    needed to complete the main gameplay. Use the attribute â€œcompleteâ€? to
+                    record the estimated amount of time for completing the main gameplay
+                    and peripheral content.
+                    If the video game does not end, record â€œN/Aâ€? . If the information
+                    cannot be determined, record â€œunknownâ€?. Record the time following
+                    the ISO 8601 Standard6
+                    (i.e., 02:30:00)."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Visual Style -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="visualStyle">Visual Style:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="theme" placeholder="Enter Visual Style">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Visual Style" data-content="Determine the visual style from the CSI, and select the most
+                    appropriate term(s) from the controlled vocabulary. When multiple
+                    styles are used, only record the predominent style(s). Select up to three
+                    terms. If unknown, record â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Dimension -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="dimension">Dimension:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="dimension" placeholder="Enter Dimension">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Dimension" data-content="Determine how depth is intended to be percieved in the video game and
+                    select the most appropriate term from the following list: 2D; 3D;
+                    Stereoscopic 3D; multiple; unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Point of view -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pointOfView">Point of View:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="pointOfView" placeholder="Enter Point of View">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Point of View" data-content="Determine the perspective from which the player experiences the video
+                    game. Record the appropriate term from the following list: first person;
+                    third person; overhead; multiple; other."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Trailers -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="trailers">Trailers:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="trailers" placeholder="Enter Trailers">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Trailers" data-content="Transcribe the URLs to trailers as found on the CSI. Include the
+                    retrieved date information. If possible, provide links to official trailers
+                    on YouTube channels, etc. This element provides only trailers, not
+                    actual, in-game play video information.
+                    If available, record the video, if licensed to use by your organization.
+                    Create and preserve the videos according to your organization's
+                    standards. Upload or indicate the location of the video(s) according to
+                    your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Edition Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="editionNote">Edition Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Edition Note" data-content="Record notable or unique characteristics of the video game edition, not
+                    captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Theme -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="theme">Theme:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Theme" data-content="Determine the theme from the primary and secondary CSI. Select the
-                most appropriate terms from the controlled vocabulary. Select as many
-                terms as necessary. If no themes are applicable, record â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Local Release Entity -->
+        <div class="form-selection">
+
+            <!-- Language -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="language">Language:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="language" placeholder="Enter Language">
+                    <input type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Language" data-content="List all the primary language(s) in which the video game conveys
+                    information. When users can change language settings, provide all the
+                    available language options. Use the appropriate language code from ISO
+                    6397
+                    . If no language code is available use â€œOTâ€? for â€œotherâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Customization Options -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="customizationOptions">Customization Options:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="customizationOptions" placeholder="Enter Customization Options">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Customization Options" data-content="Determine the options for customizing the â€œDifficulty levelâ€? and
+                    â€œCharacterâ€? from the CSI. Transcribe the different options for the
+                    â€œDifficulty levelâ€?, as given in the video game (e.g., â€œinsanityâ€?, â€œgod
+                    modeâ€?). Select â€œyesâ€? or â€œnoâ€? to indicate the possibility of â€œCharacterâ€?
+                    customization."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="rating">Rating:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="rating" placeholder="Enter Rating">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Rating" data-content="Transcribe the rating as it appears on the CSI. When the rating is
+                    unknown, or the video game existed before current rating system(s),
+                    specify â€œunknownâ€?. Transcribe all information pertaining to the rating
+                    starting with the rating organization (such as ESRB) and including the
+                    audience (such as â€œM (Mature 17+)â€?) as well as the reason(s) listed
+                    alongside the rating information (for example â€œBlood and Gore. Nudity.
+                    Violence.â€?). "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Screenshots -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="screenshots">Screenshots:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="screenshots" placeholder="Enter Screenshots">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Screenshots" data-content="Obtain screenshots from the CSI that represent the visual experience of
+                    the video game, focusing on the main gameplay. Gameplay screenshots
+                    should include the video gameâ€™s user interface; if more than one user
+                    interface is typically encountered by the player (e.g., a combat HUD and
+                    an inventory screen), include a shot of each configuration.
+                    In order of preference, screenshots should represent the following: 1)
+                    main gameplay, ideally from sequences which represent significant
+                    phases of the video game; 2) title screens; 3) significant cutscenes; 4)
+                    stills that capture other notable aspects of the work (e.g., â€œEaster eggsâ€?,
+                    unique credits sequences, storytelling â€œhooksâ€?, well-known graphics
+                    glitches, or examples of the overall art/visual style). When possible
+                    during gameplay or cutscenes, include subtitles in screenshots.
+                    At a minimum, one to two screenshots should be taken during main
+                    gameplay, ideally from sequences which reflect the majority of
+                    situations.
+                    Create and preserve the images according to your organization's
+                    standards. Upload or indicate the location of the image(s) according to
+                    your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Gameplay Videos -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gameplay">Gameplay Videos:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="gameplay" placeholder="Enter Gameplay Videos">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Videos" data-content="Transcribe the URLs to gameplay videos as found on the CSI. Include
+                    the retrieved date information. If possible, provide links to official
+                    gameplay videos on YouTube channels, etc. This element provides
+                    actual, in-game video information, not trailers or openings of video
+                    games. Indicate when there is potential spoiling of video games in those
+                    videos through the spoiler attribute (Y/N).
+                    If available, record the video, if licensed to use by your organization.
+                    Create and preserve the videos according to your organization's
+                    standards. Upload or indicate the location of the video(s) according to
+                    your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Version Information -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="versionInformation">Version Information:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="versionInformation" placeholder="Enter Version Information">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Version Information" data-content="Enter the version number of the video game being cataloged, if
+                    available."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>  
+
+            <!-- Local Release Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="theme">Theme:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Local Release Note" data-content="Record notable or unique characteristics of the local release of the video
+                    game edition, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Setting -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="setting">Setting:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="setting" placeholder="Enter Setting">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Setting" data-content="Determine the type of world, location, time period from the primary
-                and secondary CSI. Select the most appropriate term(s) from the
-                controlled vocabulary for the three attributes. Select up to three terms
-                for each attribute. "><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Distribution Package Entity -->
+        <div class="form-selection">
+
+            <!-- Distribution Type -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="distributionType">Distribution Type:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="distributionType" placeholder="Enter Distribution Type">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Distribution Type" data-content="Select either â€œphysicalâ€? or â€œdigitalâ€?, whichever represents the method of
+                    distribution for the video game. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>      
+
+            <!-- File Type -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="fileType">File Type:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="fileType" placeholder="Enter File Type">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="File Type" data-content="Type in the type of file that the game is distributed as. This is only
+                    applicable to digitally distributed video games. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- File Size -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="fileSize">File Size:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="fileSize" placeholder="Enter File Size">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="File Size" data-content="Type in the size of the file, including numerical prefix and unit suffix.
+                    E.g. 1,200MB. This is only applicable to digitally distributed video
+                    games."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Representative Art -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="representativeArt">Representative Art:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="representativeArt" placeholder="Enter Representative Art">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Representative Art" data-content="If available, record a representative image of the video game licensed for
+                    use by your organization or in the public domain. Create and preserve a
+                    copy of the image according to your organizationâ€™s standards. Upload or
+                    indicate the location of the image according to your organization's
+                    system design."><span class="glyphicons glyphicons-plus">+</span></a>
+
+                </div>
+            </div>
+
+            <!-- Packaging -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="packaging">Packaging:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="packaging" placeholder="Enter Packaging">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Packaging" data-content="This is applicable only to video games with physical media. Refer to CSI
+                    and record all physical items included. If they are unknown, record
+                    â€œunknownâ€?. If the video game is digitally distributed with no physical
+                    components, record â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+            
+            <!-- DRM -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="DRM">DRM:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="DRM" placeholder="Enter DRM">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="DRM" data-content="Determine if the video game has specific DRM such as download
+                    restrictions, use restrictions, requirement of physical discs, persistent
+                    online connectivity, and if so, select â€œyesâ€?, if not, select â€œnoâ€?. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Price/MSRP -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="priceMSRP">Theme:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="priceMSRP" placeholder="Enter Price/MSRP">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Price/MSRP" data-content="Determine the Manufacturer's Suggested Retail Price (MSRP) from the
+                    CSI. Record the price with the currency, source, and the date when this
+                    information was acquired. If unknown, specify â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Distribution Entity Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="distributionEntityNote">Distribution Entity Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="distributionEntityNote" placeholder="Enter Distribution Entity Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Distribution Entity Note" data-content="Record notable or unique characteristics of the distribution entity of the
+                    video game local release, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Mood -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="mood">Mood:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="mood" placeholder="Enter Mood">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Mood" data-content="Identify the prevailing mood(s) of the video game according to the CSI;
-                generally, the experience of playing or watching a gameplay video may
-                be the most reliable source of this information. Select the most
-                appropriate term(s) from the controlled vocabulary for this element. If
-                no mood is applicable, record â€œN/Aâ€?. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Franchise Entity -->
+        <div class="form-selection">
+
+            <!-- Franchise -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="franchise">Franchise:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="franchise" placeholder="Enter Franchise">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Franchise" data-content="Determine and record the franchise information by consulting the
+                    stipulated secondary sources of information. If the video game does not
+                    belong to a franchise, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Franchise Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="franchiseNote">Franchise Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="franchiseNote" placeholder="Enter Franchise Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Franchise Note" data-content="Record notable or unique characteristics of the franchise of the video
+                    game, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Pacing -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="pacing">Pacing:</label>
-            <div class="col-sm-10">
-                <select class="form-control" id="battleSystems" placeholder="Battle System">
-                    <option></option>
-                    <option>Turn-based</option>
-                    <option>Real-time</option>
-                    <option>Other</option>
-                </select>
-                <select class="form-control" id="inGameClock" placeholder="In-game Clock">
-                    <option></option>
-                    <option>Calendar-based</option>
-                    <option>Multiple game clocks</option>
-                    <option>Timed action</option>
-                    <option>Continuous</option>
-                    <option>Other</option>
-                </select>
-                <select class="form-control" id="inGameClock" placeholder="">
-                    <option></option>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Pacing" data-content="Determine the pacing information from the CSI. This information will
-                most likely come from firsthand experience of gameplay. If firsthand
-                experience is not possible, consult secondary sources.
-                When applicable, determine the pacing information for each of the
-                following three attributes: â€œbattle system (i.e., how time flows during ingame
-                battles)â€?, â€œin-game clock (i.e., how time flows in the game
-                world)â€?, and â€œtime manipulation (i.e., the ability to stop and/or alter
-                time or the flow of time in any way)â€?. Select the most appropriate
-                term(s) from the options given below. Multiple terms can be selected
-                for the first two attributes, if applicable."><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Series Entity -->
+        <div class="form-selection">
+
+            <!-- Series Title -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="seriesTitle">Series Title:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="seriesTitle" placeholder="Enter Series Title">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Series Title" data-content="Determine and record the series based on the CSI. Series name is often
+                    indicated by the title (e.g., Final Fantasy VII; Legend of Zelda: Ocarina of
+                    Time) or subtitle (e.g., A Gabriel Knight Mystery). If the video game does
+                    not belong to a series, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Progression -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="progression">Progression:</label>
-            <div class="col-sm-10">
-                <select class="form-control" id="progression">
-                    <option></option>
-                    <option>Linear</option>
-                    <option>Branching</option>
-                    <option>Open world</option>
-                    <option>Other</option>
-                </select>
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Progression" data-content="Determine the manner in which the character progresses through the
-                video game. â€œLinearâ€? means there is one general path from the
-                beginning to end. â€œBranchingâ€? means the play progresses through a
-                branching tree of options, or players may choose which branch(es) to
-                complete the video game in an order they choose. â€œOpen worldâ€? means
-                the player has great agency to explore the game world freely and
-                progress at their own pace. Record â€œotherâ€? for types of progression not
-                outlined above. "><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Additional Content Entity -->
+        <div class="form-selection">
+
+            <!-- Content Name -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="contentName">Content Name:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="contentName" placeholder="Enter Content Name">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Content Name" data-content="Record the name of any additional content available for the video game,
+                    as indicated by the CSI. If no additional content is available, specify
+                    â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Content Type -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="contentType">Content Type:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="contentType" placeholder="Enter Content Type">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Content Type" data-content="Record the type of any additional content available for the video game,
+                    as indicated by the CSI (e.g., DLC, mod, patch). If no additional content
+                    is available, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Version Requirement -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="versionRequirement">Version Requirement:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="versionRequirement" placeholder="Enter Version Requirement">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Version Requirement" data-content="Record any special version requirements unique to playing the video
+                    game with the additional content. "><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Additional Content Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="additionalContentNote">Additional Content Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="additionalContentNote" placeholder="Enter Additional Content Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Additional Content Note" data-content="Record any notable or unique characteristics relating to the additional
+                    content of the video game, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Tropes -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="tropes">Tropes:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="tropes" placeholder="Enter Tropes">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Tropes" data-content="Identify the key tropes of the video game according to the CSI, and
-                other reference sources (e.g., reviews, critiques, walkthroughs, or
-                guides). Generally, the experience of playing the video game may be the
-                most reliable source, as tropes are often detailed video.
-                There are two cateogires of tropes: character tropes and narrative
-                tropes. Select the most appropriate term(s) from the controlled
-                vocabulary for this element. Select as many terms as necessary. If no
-                tropes are applicable, record â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Collection Entity -->
+        <div class="form-selection">
+
+            <!-- Collection title -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="collectionTitle">Collection Title:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="collectionTitle" placeholder="Enter Collection Title">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Collection Title" data-content="Record the names of the collection titles associated with the video
+                    game, as indicated by the CSI. If no collection is available, specify
+                    â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
+            </div>
+
+            <!-- Collection Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="collectionNote">Collection Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="collectionNote" placeholder="Enter Collection Note">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Collection Note" data-content="Record any notable or unique characteristics relating to the collection of
+                    the video game, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Packshot -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="packshot">Packshot:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="packshot" placeholder="Enter Packshot">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Packshot" data-content="If available, record a packshot of the video game licensed for use by
-                your organization or in the public domain. Create and preserve a copy
-                of the image according to your organizationâ€™s standards. Upload or
-                indicate the location of the image according to your organization's
-                system design."><span class="glyphicons glyphicons-plus">+</span></a>
+        <!-- Agent Entity -->
+        <div class="form-selection">
+
+            <!-- Agent Note -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="agentNote">Agent Note:</label>
+                <div class="col-sm-10">
+                    <input type="title" class="form-control" id="agentNote" placeholder="Enter Agent">
+                    <a href='#' data-toggle="popover" data-trigger="focus" title="Agent Note" data-content="Record any notable or unique characteristics of the agent, not captured
+                    in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+                </div>
             </div>
         </div>
 
-        <!-- Game Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="gameNote">Game Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="gameNote" placeholder="Enter Game Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Game Note" data-content="Record notable or unique characteristics of the video game, not
-                captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Edition Information -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="editionInformation">Edition Information:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="editionInformation" placeholder="Enter Edition Information">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Edition Information" data-content="Transcribe the edition information as it appears on the CSI, if
-                applicable. If there is no edition information, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- System Requirements -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="theme">Theme:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="System Requirements" data-content="Determine system requirements from CSI. If applicable, describe
-                â€œminimumâ€? and â€œrecommendedâ€? requirements."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Special Hardware -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="specialHardware">Special Hardware:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="specialHardware" placeholder="Enter Special Hardware">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Special Hardware" data-content="Transcribe the required and/or recommended special hardware as it
-                appears in the CSI. In many cases, this information can be identified on
-                the CSI as â€œcompatibleâ€? hardware."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Networked Features -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="networkedFeatures">Networked Features:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="networkedFeatures" placeholder="Enter Networked Features">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Networked Features" data-content="Transcribe the networked features as they appear on CSI. If the video
-                game does not offer any networked features, record â€œNoneâ€?. If the
-                information cannot be determined with certainty, enter the value as
-                â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Connectivity -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="connectivity">Connectivity:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="connectivity" placeholder="Enter Connectivity">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Connectivity" data-content="Where applicable, specify connectivity information for the following
-                three attributes: method, network type, and bandwidth. Select terms
-                from the options listed below."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Type of Ending -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="typeOfEnding">Type of Ending:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Type of Ending">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Type of Ending" data-content="Determine and specify the ending information from the CSI (â€œOver 80
-                possible endingsâ€?, â€œNew Game+ featureâ€?, etc.).
-                Record values for the following three attributes: does it end? (Y/N);
-                does it have multiple endings? (Y/N); is there any post-game content or
-                options? (Y/N)"><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Estimated Time of Completion -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="estimatedTimeOfCompletion">Estimated Time of Completion:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="estimatedTimeOfCompletion" placeholder="Enter Theme">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Estimated Time of Completion" data-content="Determine the information from the CSI. GameFaqs.com and/or
-                howlongtobeat.com may be particularly useful for sourcing this
-                information.
-                Use the attribute â€œmainâ€? to record the estimated amount of time
-                needed to complete the main gameplay. Use the attribute â€œcompleteâ€? to
-                record the estimated amount of time for completing the main gameplay
-                and peripheral content.
-                If the video game does not end, record â€œN/Aâ€? . If the information
-                cannot be determined, record â€œunknownâ€?. Record the time following
-                the ISO 8601 Standard6
-                (i.e., 02:30:00)."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Visual Style -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="visualStyle">Visual Style:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Visual Style">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Visual Style" data-content="Determine the visual style from the CSI, and select the most
-                appropriate term(s) from the controlled vocabulary. When multiple
-                styles are used, only record the predominent style(s). Select up to three
-                terms. If unknown, record â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Dimension -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="dimension">Dimension:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="dimension" placeholder="Enter Dimension">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Dimension" data-content="Determine how depth is intended to be percieved in the video game and
-                select the most appropriate term from the following list: 2D; 3D;
-                Stereoscopic 3D; multiple; unknown."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Point of view -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="pointOfView">Point of View:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="pointOfView" placeholder="Enter Point of View">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Point of View" data-content="Determine the perspective from which the player experiences the video
-                game. Record the appropriate term from the following list: first person;
-                third person; overhead; multiple; other."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Trailers -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="trailers">Trailers:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="trailers" placeholder="Enter Trailers">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Trailers" data-content="Transcribe the URLs to trailers as found on the CSI. Include the
-                retrieved date information. If possible, provide links to official trailers
-                on YouTube channels, etc. This element provides only trailers, not
-                actual, in-game play video information.
-                If available, record the video, if licensed to use by your organization.
-                Create and preserve the videos according to your organization's
-                standards. Upload or indicate the location of the video(s) according to
-                your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Edition Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="editionNote">Edition Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Edition Note" data-content="Record notable or unique characteristics of the video game edition, not
-                captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Language -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="language">Language:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="language" placeholder="Enter Language">
-                <input type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Language" data-content="List all the primary language(s) in which the video game conveys
-                information. When users can change language settings, provide all the
-                available language options. Use the appropriate language code from ISO
-                6397
-                . If no language code is available use â€œOTâ€? for â€œotherâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Customization Options -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="customizationOptions">Customization Options:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="customizationOptions" placeholder="Enter Customization Options">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Customization Options" data-content="Determine the options for customizing the â€œDifficulty levelâ€? and
-                â€œCharacterâ€? from the CSI. Transcribe the different options for the
-                â€œDifficulty levelâ€?, as given in the video game (e.g., â€œinsanityâ€?, â€œgod
-                modeâ€?). Select â€œyesâ€? or â€œnoâ€? to indicate the possibility of â€œCharacterâ€?
-                customization."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Rating -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="rating">Rating:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="rating" placeholder="Enter Rating">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Rating" data-content="Transcribe the rating as it appears on the CSI. When the rating is
-                unknown, or the video game existed before current rating system(s),
-                specify â€œunknownâ€?. Transcribe all information pertaining to the rating
-                starting with the rating organization (such as ESRB) and including the
-                audience (such as â€œM (Mature 17+)â€?) as well as the reason(s) listed
-                alongside the rating information (for example â€œBlood and Gore. Nudity.
-                Violence.â€?). "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Screenshots -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="screenshots">Screenshots:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="screenshots" placeholder="Enter Screenshots">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Screenshots" data-content="Obtain screenshots from the CSI that represent the visual experience of
-                the video game, focusing on the main gameplay. Gameplay screenshots
-                should include the video gameâ€™s user interface; if more than one user
-                interface is typically encountered by the player (e.g., a combat HUD and
-                an inventory screen), include a shot of each configuration.
-                In order of preference, screenshots should represent the following: 1)
-                main gameplay, ideally from sequences which represent significant
-                phases of the video game; 2) title screens; 3) significant cutscenes; 4)
-                stills that capture other notable aspects of the work (e.g., â€œEaster eggsâ€?,
-                unique credits sequences, storytelling â€œhooksâ€?, well-known graphics
-                glitches, or examples of the overall art/visual style). When possible
-                during gameplay or cutscenes, include subtitles in screenshots.
-                At a minimum, one to two screenshots should be taken during main
-                gameplay, ideally from sequences which reflect the majority of
-                situations.
-                Create and preserve the images according to your organization's
-                standards. Upload or indicate the location of the image(s) according to
-                your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Gameplay Videos -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="gameplay">Gameplay Videos:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="gameplay" placeholder="Enter Gameplay Videos">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Videos" data-content="Transcribe the URLs to gameplay videos as found on the CSI. Include
-                the retrieved date information. If possible, provide links to official
-                gameplay videos on YouTube channels, etc. This element provides
-                actual, in-game video information, not trailers or openings of video
-                games. Indicate when there is potential spoiling of video games in those
-                videos through the spoiler attribute (Y/N).
-                If available, record the video, if licensed to use by your organization.
-                Create and preserve the videos according to your organization's
-                standards. Upload or indicate the location of the video(s) according to
-                your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Version Information -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="versionInformation">Version Information:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="versionInformation" placeholder="Enter Version Information">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Version Information" data-content="Enter the version number of the video game being cataloged, if
-                available."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>  
-
-        <!-- Local Release Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="theme">Theme:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Local Release Note" data-content="Record notable or unique characteristics of the local release of the video
-                game edition, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Distribution Type -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="distributionType">Distribution Type:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="distributionType" placeholder="Enter Distribution Type">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Distribution Type" data-content="Select either â€œphysicalâ€? or â€œdigitalâ€?, whichever represents the method of
-                distribution for the video game. "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>      
-
-        <!-- File Type -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="fileType">File Type:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="fileType" placeholder="Enter File Type">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="File Type" data-content="Type in the type of file that the game is distributed as. This is only
-                applicable to digitally distributed video games. "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- File Size -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="fileSize">File Size:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="fileSize" placeholder="Enter File Size">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="File Size" data-content="Type in the size of the file, including numerical prefix and unit suffix.
-                E.g. 1,200MB. This is only applicable to digitally distributed video
-                games."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Representative Art -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="representativeArt">Representative Art:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="representativeArt" placeholder="Enter Representative Art">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Representative Art" data-content="If available, record a representative image of the video game licensed for
-                use by your organization or in the public domain. Create and preserve a
-                copy of the image according to your organizationâ€™s standards. Upload or
-                indicate the location of the image according to your organization's
-                system design."><span class="glyphicons glyphicons-plus">+</span></a>
-
-            </div>
-        </div>
-
-        <!-- Packaging -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="packaging">Packaging:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="packaging" placeholder="Enter Packaging">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Packaging" data-content="This is applicable only to video games with physical media. Refer to CSI
-                and record all physical items included. If they are unknown, record
-                â€œunknownâ€?. If the video game is digitally distributed with no physical
-                components, record â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-        
-        <!-- DRM -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="DRM">DRM:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="DRM" placeholder="Enter DRM">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="DRM" data-content="Determine if the video game has specific DRM such as download
-                restrictions, use restrictions, requirement of physical discs, persistent
-                online connectivity, and if so, select â€œyesâ€?, if not, select â€œnoâ€?. "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Price/MSRP -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="priceMSRP">Theme:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="priceMSRP" placeholder="Enter Price/MSRP">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Price/MSRP" data-content="Determine the Manufacturer's Suggested Retail Price (MSRP) from the
-                CSI. Record the price with the currency, source, and the date when this
-                information was acquired. If unknown, specify â€œunknownâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Distribution Entity Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="distributionEntityNote">Distribution Entity Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="distributionEntityNote" placeholder="Enter Distribution Entity Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Distribution Entity Note" data-content="Record notable or unique characteristics of the distribution entity of the
-                video game local release, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Franchise -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="franchise">Franchise:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="franchise" placeholder="Enter Franchise">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Franchise" data-content="Determine and record the franchise information by consulting the
-                stipulated secondary sources of information. If the video game does not
-                belong to a franchise, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Franchise Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="franchiseNote">Franchise Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="franchiseNote" placeholder="Enter Franchise Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Franchise Note" data-content="Record notable or unique characteristics of the franchise of the video
-                game, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Series Title -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="seriesTitle">Series Title:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="seriesTitle" placeholder="Enter Series Title">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Series Title" data-content="Determine and record the series based on the CSI. Series name is often
-                indicated by the title (e.g., Final Fantasy VII; Legend of Zelda: Ocarina of
-                Time) or subtitle (e.g., A Gabriel Knight Mystery). If the video game does
-                not belong to a series, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Content Name -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="contentName">Content Name:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="contentName" placeholder="Enter Content Name">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Content Name" data-content="Record the name of any additional content available for the video game,
-                as indicated by the CSI. If no additional content is available, specify
-                â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Content Type -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="contentType">Content Type:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="contentType" placeholder="Enter Content Type">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Content Type" data-content="Record the type of any additional content available for the video game,
-                as indicated by the CSI (e.g., DLC, mod, patch). If no additional content
-                is available, specify â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Version Requirement -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="versionRequirement">Version Requirement:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="versionRequirement" placeholder="Enter Version Requirement">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Version Requirement" data-content="Record any special version requirements unique to playing the video
-                game with the additional content. "><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Additional Content Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="additionalContentNote">Additional Content Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="additionalContentNote" placeholder="Enter Additional Content Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Additional Content Note" data-content="Record any notable or unique characteristics relating to the additional
-                content of the video game, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Collection title -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="collectionTitle">Collection Title:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="collectionTitle" placeholder="Enter Collection Title">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Collection Title" data-content="Record the names of the collection titles associated with the video
-                game, as indicated by the CSI. If no collection is available, specify
-                â€œN/Aâ€?."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Collection Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="collectionNote">Collection Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="collectionNote" placeholder="Enter Collection Note">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Collection Note" data-content="Record any notable or unique characteristics relating to the collection of
-                the video game, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
-        </div>
-
-        <!-- Agent Note -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="agentNote">Agent Note:</label>
-            <div class="col-sm-10">
-                <input type="title" class="form-control" id="agentNote" placeholder="Enter Agent">
-                <a href='#' data-toggle="popover" data-trigger="focus" title="Agent Note" data-content="Record any notable or unique characteristics of the agent, not captured
-                in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
-            </div>
+        <div class="form-navigation">
+            <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
+            <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
+            <input type="submit" class="btn btn-default pull-right">
+            <span class="clearfix"></span>
         </div>
 
     </form>
