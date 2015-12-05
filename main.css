@@ -47,6 +47,11 @@ div.container {
     color: #FF4500;
 }
 
+#buttons {
+    margin-top: 5%;
+    text-align: center;
+}
+
 #settingsIcon {
     height: 2em;
     fill: white;
