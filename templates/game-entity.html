@@ -1,4 +1,12 @@
-<form data-parsley-validate class="form-horizontal" role="form">
+<form data-parsley-validate class="form-horizontal" role="form" ng-app="myApp" ng-controller="myCtrl">
+
+    <div class="form-navigation">
+        <a ui-sref='new-game-entity' type="button" class="previous btn btn-info pull-left">&lt; Previous</a>
+        <a ui-sref='franchise-entity' type="button" class="next btn btn-info pull-right">Next &gt;</a>
+        <input type="submit" class="btn btn-default pull-right">
+        <span class="clearfix"></span>
+    </div>
+
     <!--Game Entity -->
 
     <div class="form-section">

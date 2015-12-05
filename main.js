@@ -158,6 +158,21 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: 'templates/local-release-entity.html',
 			controller: 'LocalReleaseEntityController'
 		})
+		.state('series-entity', {
+			url: '/series-entity',
+			templateUrl: 'templates/series-entity.html',
+			controller: 'SeriesEntityController'
+		})
+		.state('collection-entity', {
+			url: '/collection-entity',
+			templateUrl: 'templates/collection-entity.html',
+			controller: 'CollectionEntityController'
+		})
+		.state('agent-entity', {
+			url: '/agent-entity',
+			templateUrl: 'templates/agent-entity.html',
+			controller: 'AgentEntityController'
+		})
 })
 
 .controller('ProfileController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
@@ -214,7 +229,17 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 	})
 	.controller('LocalReleaseEntityController', function($scope){
 
+	})
+	.controller('SeriesEntityController', function($scope){
+
+	})
+	.controller('CollectionEntityController', function($scope){
+
+	})
+	.controller('AgentEntityController', function($scope){
+
 	});
+
 
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
