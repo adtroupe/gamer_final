@@ -181,9 +181,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 .controller('NewGameController', function($scope) {
 	$scope.title = "Required";
-	//$(document).ready(function() {
-    	//$('[data-toggle="popover"]').popover();
-	//});
+	$(document).ready(function() {
+    	$('[data-toggle="popover"]').popover();
+	});
 	//$('form').parsley();
 	//$(function () {
   	//	var $sections = $('.form-section');
@@ -221,24 +221,45 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 	.controller('GameEntityController', function($scope){
 		$scope.title = "Game";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	})
 	.controller('FranchiseEntityController', function($scope){
-		$scope.title = "Francise";
+		$scope.title = "Franchise";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	})
 	.controller('DistributionPackageEntityController', function($scope){
 		$scope.title = "Distribution Package";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	})
 	.controller('LocalReleaseEntityController', function($scope){
 		$scope.title = "Local Release";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	})
 	.controller('SeriesEntityController', function($scope){
 		$scope.title = "Series";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	})
 	.controller('CollectionEntityController', function($scope){
 		$scope.title = "Collection";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	})
 	.controller('AgentEntityController', function($scope){
 		$scope.title = "Agent";
+		$(document).ready(function() {
+    		$('[data-toggle="popover"]').popover();
+		});
 	});
 
 
