@@ -47,10 +47,34 @@ div.container {
     color: #FF4500;
 }
 
+.form-navigation {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+.form-navigation .btn-info {
+    background-color: #a7a4a4;
+    border-color: transparent;
+}
+
+form h3 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
 #buttons {
     margin-top: 5%;
     text-align: center;
 }
+
+#buttons .btn {
+    background-color: #363636;
+    border-color: transparent;
+    color: white;
+}
+
+
 
 #settingsIcon {
     height: 2em;

@@ -180,64 +180,65 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 })
 
 .controller('NewGameController', function($scope) {
-	$(document).ready(function() {
-    	$('[data-toggle="popover"]').popover();
-	});
-	$('form').parsley();
-	$(function () {
-  		var $sections = $('.form-section');
-
-  		function navigateTo(index) {
-    		$sections
-      			.removeClass('current')
-      			.eq(index)
-        		.addClass('current');
-    		$('.form-navigation .previous').toggle(index > 0);
-    		var atTheEnd = index >= $sections.length - 1;
-    		$('.form-navigation .next').toggle(!atTheEnd);
-    		$('.form-navigation [type=submit]').toggle(atTheEnd);
-  		}
-
-  		function curIndex() {
-    		return $sections.index($sections.filter('.current'));
-  		}
-
-  		$('.form-navigation .previous').click(function() {
-    		navigateTo(curIndex() - 1);
- 		});
-
-  		$('.form-navigation .next').click(function() {
-    		if ($('.demo-form').parsley().validate('block-' + curIndex()))
-      			navigateTo(curIndex() + 1);
-  		});
-
-  		$sections.each(function(index, section) {
-    		$(section).find(':input').attr('data-parsley-group', 'block-' + index);
-  		});
-  		navigateTo(0);
-	});
+	$scope.title = "Required";
+	//$(document).ready(function() {
+    	//$('[data-toggle="popover"]').popover();
+	//});
+	//$('form').parsley();
+	//$(function () {
+  	//	var $sections = $('.form-section');
+    //
+  	//	function navigateTo(index) {
+    	//	$sections
+     // 			.removeClass('current')
+     // 			.eq(index)
+     //   		.addClass('current');
+    	//	$('.form-navigation .previous').toggle(index > 0);
+    	//	var atTheEnd = index >= $sections.length - 1;
+    	//	$('.form-navigation .next').toggle(!atTheEnd);
+    	//	$('.form-navigation [type=submit]').toggle(atTheEnd);
+  	//	}
+    //
+  	//	function curIndex() {
+    	//	return $sections.index($sections.filter('.current'));
+  	//	}
+    //
+  	//	$('.form-navigation .previous').click(function() {
+    	//	navigateTo(curIndex() - 1);
+ 	//	});
+    //
+  	//	$('.form-navigation .next').click(function() {
+    	//	if ($('.demo-form').parsley().validate('block-' + curIndex()))
+     // 			navigateTo(curIndex() + 1);
+  	//	});
+    //
+  	//	$sections.each(function(index, section) {
+    	//	$(section).find(':input').attr('data-parsley-group', 'block-' + index);
+  	//	});
+  	//	navigateTo(0);
+	//})
 })
 
 	.controller('GameEntityController', function($scope){
-
+		$scope.title = "Game";
 	})
 	.controller('FranchiseEntityController', function($scope){
-
+		$scope.title = "Francise";
 	})
 	.controller('DistributionPackageEntityController', function($scope){
-
+		$scope.title = "Distribution Package";
 	})
 	.controller('LocalReleaseEntityController', function($scope){
-
+		$scope.title = "Local Release";
 	})
 	.controller('SeriesEntityController', function($scope){
-
+		$scope.title = "Series";
 	})
 	.controller('CollectionEntityController', function($scope){
-
+		$scope.title = "Collection";
 	})
 	.controller('AgentEntityController', function($scope){
-
+		$scope.title = "Agent";
 	});
 
 
