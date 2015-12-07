@@ -14,7 +14,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="contentName">Content Name:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="contentName" placeholder="Enter Content Name">
+                <input ng-model='contentName' type="title" class="form-control" id="contentName" placeholder="Enter Content Name">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Content Name" data-content="Record the name of any additional content available for the video game,
@@ -27,7 +27,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="contentType">Content Type:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="contentType" placeholder="Enter Content Type">
+                <input ng-model='contentType' type="title" class="form-control" id="contentType" placeholder="Enter Content Type">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Content Type" data-content="Record the type of any additional content available for the video game,
@@ -40,7 +40,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="versionRequirement">Version Requirement:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="versionRequirement" placeholder="Enter Version Requirement">
+                <input ng-model='versionReq' type="title" class="form-control" id="versionRequirement" placeholder="Enter Version Requirement">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Version Requirement" data-content="Record any special version requirements unique to playing the video
@@ -52,7 +52,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="additionalContentNote">Additional Content Note:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="additionalContentNote" placeholder="Enter Additional Content Note">
+                <input ng-model='contentNote' type="title" class="form-control" id="additionalContentNote" placeholder="Enter Additional Content Note">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Additional Content Note" data-content="Record any notable or unique characteristics relating to the additional

@@ -14,9 +14,9 @@
         <!-- Narrative Genre -->
 
         <div class="form-group">
-            <label class="control-label col-sm-2" for="corporateBody">Narrative Genre:</label>
+            <label class="control-label col-sm-2" for="narrativeGenre">Narrative Genre:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="coporateBody" placeholder="Enter Narrative Genre">
+                <input ng-model='narrativeGenre' type="title" class="form-control" id="narrativeGenre" placeholder="Enter Narrative Genre">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Narrative Genre" data-content="Determine narrative genre from the CSI. Select the most appropriate
@@ -27,9 +27,9 @@
 
         <!-- Summary -->
         <div class="form-group">
-            <label class="control-label col-sm-2" for="corporateBody">Summary:</label>
+            <label class="control-label col-sm-2" for="summary">Summary:</label>
             <div class="col-sm-8">
-                <textarea type="title" class="form-control" id="summary" placeholder="Enter Summary"></textarea>
+                <textarea ng-model='gameSummary' type="title" class="form-control" id="summary" placeholder="Enter Summary"></textarea>
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Summary" data-content="Write a brief summary of the video game's narrative and/or main
@@ -41,7 +41,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="theme">Theme:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
+                <input ng-model='theme' type="title" class="form-control" id="theme" placeholder="Enter Theme">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Theme" data-content="Determine the theme from the primary and secondary CSI. Select the
@@ -54,9 +54,9 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="setting">Setting:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="world" placeholder="Enter World">
-                <input type="title" class="form-control" id="place" placeholder="Enter Place">
-                <input type="title" class="form-control" id="time" placeholder="Enter Time">
+                <input ng-model='gameWorld' type="title" class="form-control" id="world" placeholder="Enter World">
+                <input ng-model='gamePlace' type="title" class="form-control" id="place" placeholder="Enter Place">
+                <input ng-model='gameTime' type="title" class="form-control" id="time" placeholder="Enter Time">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Setting" data-content="Determine the type of world, location, time period from the primary
@@ -70,7 +70,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="mood">Mood:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="mood" placeholder="Enter Mood">
+                <input ng-model='gameMood' type="title" class="form-control" id="mood" placeholder="Enter Mood">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Mood" data-content="Identify the prevailing mood(s) of the video game according to the CSI;
@@ -85,13 +85,13 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="pacing">Pacing:</label>
             <div class="col-sm-2">
-                <select class="form-control" id="battleSystems" placeholder="Battle System">
+                <select ng-model='battleSystems' class="form-control" id="battleSystems" placeholder="Battle System">
                     <option></option>
                     <option>Turn-based</option>
                     <option>Real-time</option>
                     <option>Other</option>
                 </select>
-                <select class="form-control" id="inGameClock" placeholder="In-game Clock">
+                <select ng-model='inGameClock' class="form-control" id="inGameClock" placeholder="In-game Clock">
                     <option></option>
                     <option>Calendar-based</option>
                     <option>Multiple game clocks</option>
@@ -99,7 +99,7 @@
                     <option>Continuous</option>
                     <option>Other</option>
                 </select>
-                <select class="form-control" id="inGameClock" placeholder="">
+                <select ng-model='inGameClockYN' class="form-control" id="inGameClockYN" placeholder="">
                     <option></option>
                     <option>Yes</option>
                     <option>No</option>
@@ -123,7 +123,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="progression">Progression:</label>
             <div class="col-sm-8">
-                <select class="form-control" id="progression">
+                <select ng-model='progression' class="form-control" id="progression">
                     <option></option>
                     <option>Linear</option>
                     <option>Branching</option>
@@ -147,7 +147,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="tropes">Tropes:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="tropes" placeholder="Enter Tropes">
+                <input ng-model='gameTropes' type="title" class="form-control" id="tropes" placeholder="Enter Tropes">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Tropes" data-content="Identify the key tropes of the video game according to the CSI, and
@@ -165,7 +165,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="packshot">Packshot:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="packshot" placeholder="Enter Packshot">
+                <input ng-model='packshot' type="title" class="form-control" id="packshot" placeholder="Enter Packshot">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Packshot" data-content="If available, record a packshot of the video game licensed for use by
@@ -180,7 +180,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="gameNote">Game Note:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="gameNote" placeholder="Enter Game Note">
+                <input ng-model='gameNote' type="title" class="form-control" id="gameNote" placeholder="Enter Game Note">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Game Note" data-content="Record notable or unique characteristics of the video game, not

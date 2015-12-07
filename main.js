@@ -18,23 +18,6 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 	if (authData) {
 		$scope.userId = authData.uid;
 	}
-	
-	// $scope.signIn = function() {
-	// 	$scope.logIn().then(function(error, authData) {
-	// 		if (error) {
-	// 			$scope.logInFailureMessage = 'Your attempt to log in has failed :( Please make sure you have entered your email and password correctly.';
-	// 		} else {
-	// 			$scope.userId = authData.uid;
-	// 		}			
-	// 	})
-	// }
-
-	// $scope.logIn = function() {
-	// 	return $scope.authObj.$authWithPassword({
-	// 		email: $scope.email,
-	// 		password: $scope.password
-	// 	})
-	// }
 
 	$scope.signIn = function() {
 		ref.authWithPassword({
@@ -143,36 +126,36 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: 'templates/game-entity.html',
 		controller: 'GameEntityController'
 	})
-		.state('franchise-entity', {
-			url: '/franchise-entity',
-			templateUrl: 'templates/franchise-entity.html',
-			controller: 'FranchiseEntityController'
-		})
-		.state('distribution-package-entity', {
-			url: '/distribution-package-entity',
-			templateUrl: 'templates/distribution-package-entity.html',
-			controller: 'DistributionPackageEntityController'
-		})
-		.state('local-release-entity', {
-			url: '/local-release-entity',
-			templateUrl: 'templates/local-release-entity.html',
-			controller: 'LocalReleaseEntityController'
-		})
-		.state('series-entity', {
-			url: '/series-entity',
-			templateUrl: 'templates/series-entity.html',
-			controller: 'SeriesEntityController'
-		})
-		.state('collection-entity', {
-			url: '/collection-entity',
-			templateUrl: 'templates/collection-entity.html',
-			controller: 'CollectionEntityController'
-		})
-		.state('agent-entity', {
-			url: '/agent-entity',
-			templateUrl: 'templates/agent-entity.html',
-			controller: 'AgentEntityController'
-		})
+	.state('franchise-entity', {
+		url: '/franchise-entity',
+		templateUrl: 'templates/franchise-entity.html',
+		controller: 'FranchiseEntityController'
+	})
+	.state('distribution-package-entity', {
+		url: '/distribution-package-entity',
+		templateUrl: 'templates/distribution-package-entity.html',
+		controller: 'DistributionPackageEntityController'
+	})
+	.state('local-release-entity', {
+		url: '/local-release-entity',
+		templateUrl: 'templates/local-release-entity.html',
+		controller: 'LocalReleaseEntityController'
+	})
+	.state('series-entity', {
+		url: '/series-entity',
+		templateUrl: 'templates/series-entity.html',
+		controller: 'SeriesEntityController'
+	})
+	.state('collection-entity', {
+		url: '/collection-entity',
+		templateUrl: 'templates/collection-entity.html',
+		controller: 'CollectionEntityController'
+	})
+	.state('agent-entity', {
+		url: '/agent-entity',
+		templateUrl: 'templates/agent-entity.html',
+		controller: 'AgentEntityController'
+	})
 })
 
 .controller('ProfileController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
@@ -217,6 +200,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   	//	});
   	//	navigateTo(0);
 	//})
+
 })
 
 	.controller('GameEntityController', function($scope){
@@ -255,13 +239,65 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     		$('[data-toggle="popover"]').popover();
 		});
 	})
-	.controller('AgentEntityController', function($scope){
+	.controller('AgentEntityController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject){
 		$scope.title = "Agent";
 		$(document).ready(function() {
     		$('[data-toggle="popover"]').popover();
 		});
-	});
 
+		$scope.addGame = function() {
+			$scope.entries[$scope.userId] = {
+				title: $scope.gameTitle,
+				genre: $scope.gameplayGenre,
+				platform: $scope.gamePlatform,
+				numberOfPlayers: $scope.numPlayers,
+				regionCode: $scope.regionCode,
+				format: $scope.gameFormat,
+				releaseDate: $scope.retailRelease,
+				corporateBody: $scope.corporateBody,
+				genre: $scope.narrativeGenre,
+				summary: $scope.gameSummary,
+				theme: $scope.theme,
+				world: $scope.gameWorld,
+				place: $scope.gamePlace,
+				time: $scope.gameTime,
+				mood: $scope.gameMood,
+				battleSystem: $scope.battleSystems,
+				inGameClock: $scope.inGameClock,
+				inGameClockYN: $scope.inGameClockYN,
+				progression: $scope.progression,
+				tropes: $scope.gameTropes,
+				packshot: $scope.packshot,
+				notes: $scope.gameNote,
+				franchise: $scope.franchise,
+				franchiseNotes: $scope.franchiseNote,
+				distributionType: $scope.distType,
+				fileType: $scope.fileType,
+				fileSize: $scope.fileSize,
+				representativeArt: $scope.repArt,
+				packaging: $scope.packaging,
+				drm: $scope.gameDRM,
+				priceMSRP: $scope.priceMSRP,
+				distributionEntityNotes: $scope.distEntityNote,
+				languages: $scope.languages,
+				editionNotes: $scope.editionNote,
+				difficultyLevels: $scope.difficultyLevels,
+				customizableCharacters: $scope.custChar,
+				rating: $scope.gameRating,
+				screenshots: $scope.screenshots,
+				videos: $scope.gameplayVids,
+				version: $scope.versionInfo,
+				themeNotes: $scope.gameThemeNote,
+				seriesTitle: $scope.seriesTitle,
+				contentName: $scope.contentName,
+				contentType: $scope.contentType,
+				versionRequirements: $scope.versionReq,
+				contentNotes: $scope.contentNote,
+				agentNotes: $scope.agentNote
+			}
+			$scope.entries.save();
+		};
+	});
 
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets

@@ -86,7 +86,7 @@ Agent note
                 <label class="control-label col-sm-2" for="gameTitle">Game Title *:</label>
                 <div class="col-sm-8">
                     <a href="#" data-toggle="tooltip" title="Please enter the full title">
-                    <input type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title"></a>
+                    <input ng-model='gameTitle' type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title"></a>
                 </div>
                 <div class="col-sm-2">
                     <a href='#' data-toggle="popover" data-trigger="focus" title="Game Title" data-content="Transcribed title: Transcribe the title as it appears on the Chief Source
@@ -109,7 +109,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="gameplayGenre">Gameplay Genre *:</label>
                 <div class="col-sm-8">
-                    <input type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre">
+                    <input ng-model='gameplayGenre' type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre">
                 </div>
                 <div class="col-sm-2">
                     <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Genre" data-content="Determine gameplay genre from the primary and secondary CSI. Select
@@ -122,7 +122,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="platform">Platform *:</label>
                 <div class="col-sm-8">
-                    <input type="title" class="form-control" id="platform" placeholder="Enter Platform">
+                    <input ng-model='gamePlatform' type="title" class="form-control" id="platform" placeholder="Enter Platform">
                 </div>
                 <div class="col-sm-2">
                     <a href='#' data-toggle="popover" data-trigger="focus" title="Platform" data-content="The hardware and operating system on which the video game was
@@ -134,7 +134,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="sell">Number of Players *:</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="sell">
+                    <select ng-model='numPlayers' class="form-control" id="sell">
                         <option></option>
                         <option>1</option>
                         <option>1-2</option>
@@ -167,7 +167,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="regionCode">Region Code *:</label>
                 <div class="col-sm-8">
-                    <input type="title" class="form-control" id="regionCode" placeholder="Enter Region Code">
+                    <input ng-model='regionCode' type="title" class="form-control" id="regionCode" placeholder="Enter Region Code">
                 </div>
                 <div class="col-sm-2">
                     <a href='#' data-toggle="popover" data-trigger="focus" title="Region Code" data-content="Transcribe the region code(s) as they appear on the CSI. On physical
@@ -183,7 +183,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="sell">Format *:</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="sell">
+                    <select ng-model='gameFormat' class="form-control" id="sell">
                         <option></option>
                         <option>cartridge</option>
                         <option>optical</option>
@@ -202,7 +202,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="retailRelease">Retail Release Date *:</label>
                 <div class="col-sm-8">
-                    <input type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date">
+                    <input ng-model='retailRelease' type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date">
                 </div>
                 <div class="col-sm-2">
                     <a href='#' data-toggle="popover" data-trigger="focus" title="Retail Release Date" data-content="Determine the release date from the CSI, and record it following the
@@ -216,7 +216,7 @@ Agent note
             <div class="form-group">
                 <label class="control-label col-sm-2" for="corporateBody">Corporate Body *:</label>
                 <div class="col-sm-8">
-                    <input type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body">
+                    <input ng-model='corporateBody' type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body">
                 </div>
                 <div class="col-sm-2">
                     <a href='#' data-toggle="popover" data-trigger="focus" title="Corporate Body" data-content="Determine the responsible corporate body by consulting the CSI. If

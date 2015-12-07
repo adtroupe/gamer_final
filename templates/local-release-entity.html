@@ -14,8 +14,8 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="language">Language:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="language" placeholder="Enter Language">
-                <input type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
+                <input ng-model='languages' type="title" class="form-control" id="language" placeholder="Enter Language">
+                <input ng-model='editionNote' type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Language" data-content="List all the primary language(s) in which the video game conveys
@@ -30,8 +30,8 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="customizationOptions">Customization Options:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="customizationOptions" placeholder="List Difficulty Levels">
-                <input type="title" class="form-control" id="customizationOptions" placeholder="Can you customize characters?">
+                <input ng-model='difficultyLevels' type="title" class="form-control" id="customizationOptions" placeholder="List Difficulty Levels">
+                <input ng-model='custChar' type="title" class="form-control" id="customizationOptions" placeholder="Can you customize characters?">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Customization Options" data-content="Determine the options for customizing the Difficulty level and
@@ -46,7 +46,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="rating">Rating:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="rating" placeholder="Enter Rating">
+                <input ng-model='gameRating' type="title" class="form-control" id="rating" placeholder="Enter Rating">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Rating" data-content="Transcribe the rating as it appears on the CSI. When the rating is
@@ -63,7 +63,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="screenshots">Screenshots:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="screenshots" placeholder="Enter Screenshots">
+                <input ng-model='screenshots' type="title" class="form-control" id="screenshots" placeholder="Enter Screenshots">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Screenshots" data-content="Obtain screenshots from the CSI that represent the visual experience of
@@ -91,7 +91,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="gameplay">Gameplay Videos:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="gameplay" placeholder="Enter Gameplay Videos">
+                <input ng-model='gameplayVids' type="title" class="form-control" id="gameplay" placeholder="Enter Gameplay Videos">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Videos" data-content="Transcribe the URLs to gameplay videos as found on the CSI. Include
@@ -111,7 +111,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="versionInformation">Version Information:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="versionInformation" placeholder="Enter Version Information">
+                <input ng-model='versionInfo' type="title" class="form-control" id="versionInformation" placeholder="Enter Version Information">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Version Information" data-content="Enter the version number of the video game being cataloged, if
@@ -123,7 +123,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="theme">Theme:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="theme" placeholder="Enter Theme">
+                <input ng-model='gameThemeNote' type="title" class="form-control" id="theme" placeholder="Enter Theme">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Local Release Note" data-content="Record notable or unique characteristics of the local release of the video

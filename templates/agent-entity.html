@@ -2,7 +2,7 @@
     <h3 ng-bind="title"></h3>
     <div class="form-navigation">
         <a ui-sref='collection-entity' type="button" class="previous btn btn-info pull-left hvr-sweep-to-left">&lt; Previous</a>
-        <input type="submit" class="btn btn-default pull-right hvr-back-pulse">
+        <input ng-click='addGame()' type="submit" class="btn btn-default pull-right hvr-back-pulse">
         <span class="clearfix"></span>
     </div>
 
@@ -13,7 +13,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="agentNote">Agent Note:</label>
             <div class="col-sm-8">
-                <input type="title" class="form-control" id="agentNote" placeholder="Enter Agent">
+                <input ng-model='agentNote' type="title" class="form-control" id="agentNote" placeholder="Enter Agent">
             </div>
             <div class="col-sm-2">
                 <a href='#' data-toggle="popover" data-trigger="focus" title="Agent Note" data-content="Record any notable or unique characteristics of the agent, not captured
