@@ -9,7 +9,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 	var entriesRef = ref.child('entries');
 
 	$scope.users = $firebaseObject(usersRef);
-	$scope.entries = $firebaseObject(entriesRef)
+	$scope.entries = $firebaseObject(entriesRef);
 	
 	$scope.authObj = $firebaseAuth(ref);
 	
@@ -49,8 +49,8 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 			firstname:$scope.firstname,
 			lastname:$scope.lastname,
 			institution:$scope.institution,
-			dateupdated: new Date().toString().split(' ').splice(1,3).join(' '),
-		}
+			dateupdated: new Date().toString().split(' ').splice(1,3).join(' ')
+		};
 		$scope.users.$save()
 		.then($scope.closeAccountModal)
 	};
@@ -59,7 +59,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 		ref.changeEmail({
 			oldEmail: $scope.currentEmail,
 			newEmail: $scope.newEmail1,
-			password: $scope.changeEmailPW,
+			password: $scope.changeEmailPW
 		}, function(error) {
 			if (error === null) {
 				$scope.closeAccountModal();			
@@ -73,7 +73,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 		ref.changePassword({
 			email: $scope.emailPW,
 			oldPassword: $scope.currentPassword,
-			newPassword: $scope.newPassword1,
+			newPassword: $scope.newPassword1
 		}, function(error) {
 			if (error === null) {
 				$scope.closeAccountModal();			
@@ -110,7 +110,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 });
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.when('','/')
+	$urlRouterProvider.when('','/');
 	$stateProvider.state('profile', {
 		url: '/',
 		templateUrl: 'templates/profile.html',
@@ -294,7 +294,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 				versionRequirements: $scope.versionReq,
 				contentNotes: $scope.contentNote,
 				agentNotes: $scope.agentNote
-			}
+			};
 			$scope.entries.save();
 		};
 	});
