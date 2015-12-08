@@ -6,7 +6,7 @@
     <label class="control-label col-sm-2" for="gameTitle">Game Title *:</label>
     <div class="col-sm-8">
         <a href="#" data-toggle="tooltip" title="Please enter the full title">
-        <input ng-model='gameData.gameTitle' type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title"></a>
+        <input ng-model='gameData.gameTitle' type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title" required></a>
     </div>
     <div class="col-sm-2">
         <a href='#' data-toggle="popover" data-trigger="focus" title="Game Title" data-content="Transcribed title: Transcribe the title as it appears on the Chief Source
@@ -29,7 +29,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="gameplayGenre">Gameplay Genre *:</label>
     <div class="col-sm-8">
-        <input ng-model='gameData.gameplayGenre' type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre">
+        <input ng-model='gameData.gameplayGenre' type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre" required>
     </div>
     <div class="col-sm-2">
         <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Genre" data-content="Determine gameplay genre from the primary and secondary CSI. Select
@@ -42,7 +42,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="platform">Platform *:</label>
     <div class="col-sm-8">
-        <input ng-model='gameData.gamePlatform' type="title" class="form-control" id="platform" placeholder="Enter Platform">
+        <input ng-model='gameData.gamePlatform' type="title" class="form-control" id="platform" placeholder="Enter Platform" required>
     </div>
     <div class="col-sm-2">
         <a href='#' data-toggle="popover" data-trigger="focus" title="Platform" data-content="The hardware and operating system on which the video game was
@@ -54,7 +54,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="sell">Number of Players *:</label>
     <div class="col-sm-8">
-        <select ng-model='gameData.numPlayers' class="form-control" id="sell">
+        <select ng-model='gameData.numPlayers' class="form-control" id="sell" required>
             <option></option>
             <option>1</option>
             <option>1-2</option>
@@ -87,7 +87,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="regionCode">Region Code *:</label>
     <div class="col-sm-8">
-        <input ng-model='gameData.regionCode' type="title" class="form-control" id="regionCode" placeholder="Enter Region Code">
+        <input ng-model='gameData.regionCode' type="title" class="form-control" id="regionCode" placeholder="Enter Region Code" required>
     </div>
     <div class="col-sm-2">
         <a href='#' data-toggle="popover" data-trigger="focus" title="Region Code" data-content="Transcribe the region code(s) as they appear on the CSI. On physical
@@ -103,7 +103,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="sell">Format *:</label>
     <div class="col-sm-8">
-        <select ng-model='gameData.gameFormat' class="form-control" id="sell">
+        <select ng-model='gameData.gameFormat' class="form-control" id="sell" required>
             <option></option>
             <option>cartridge</option>
             <option>optical</option>
@@ -122,7 +122,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="retailRelease">Retail Release Date *:</label>
     <div class="col-sm-8">
-        <input ng-model='gameData.retailRelease' type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date">
+        <input ng-model='gameData.retailRelease' type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date" required>
     </div>
     <div class="col-sm-2">
         <a href='#' data-toggle="popover" data-trigger="focus" title="Retail Release Date" data-content="Determine the release date from the CSI, and record it following the
@@ -136,7 +136,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="corporateBody">Corporate Body *:</label>
     <div class="col-sm-8">
-        <input ng-model='gameData.corporateBody' type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body">
+        <input ng-model='gameData.corporateBody' type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body" required>
     </div>
     <div class="col-sm-2">
         <a href='#' data-toggle="popover" data-trigger="focus" title="Corporate Body" data-content="Determine the responsible corporate body by consulting the CSI. If
@@ -150,5 +150,5 @@
 </div>
 
 <div class="form-navigation form-group">
-    <a ui-sref="game.entity" type="button" class="next btn btn-info pull-right hvr-sweep-to-right">Next &gt;</a>
+    <a ui-sref="game.entity" type="button" ng-disabled='newGameForm.$invalid' class="next btn btn-info pull-right hvr-sweep-to-right">Next &gt;</a>
 </div>

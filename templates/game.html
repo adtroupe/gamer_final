@@ -64,17 +64,17 @@ Agent note
 		<div class='page-header text-center'>
 			<div id='status-buttons buttons' class='text-center'>
 				<a ui-sref-active='active' ui-sref='.required' class="btn btn-sm">Required</a>
-				<a ui-sref-active='active' ui-sref='.entity' class="btn btn-sm">Game</a>
-				<a ui-sref-active='active' ui-sref='.platform' class="btn btn-sm">Platform</a>		
-				<a ui-sref-active='active' ui-sref='.franchise' class="btn btn-sm">Franchise</a>
-				<a ui-sref-active='active' ui-sref='.distribution' class="btn btn-sm">Distribution Package</a>
-				<a ui-sref-active='active' ui-sref='.release' class="btn btn-sm">Local Release</a>
-				<a ui-sref-active='active' ui-sref='.series' class="btn btn-sm">Series</a>
-				<a ui-sref-active='active' ui-sref='.content' class="btn btn-sm">Content</a>
-				<a ui-sref-active='active' ui-sref='.agent' class="btn btn-sm">Agent</a>
+				<a ui-sref-active='active' ui-sref='.entity' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Game</a>
+				<a ui-sref-active='active' ui-sref='.platform' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Platform</a>		
+				<a ui-sref-active='active' ui-sref='.franchise' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Franchise</a>
+				<a ui-sref-active='active' ui-sref='.distribution' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Distribution Package</a>
+				<a ui-sref-active='active' ui-sref='.release' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Local Release</a>
+				<a ui-sref-active='active' ui-sref='.series' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Series</a>
+				<a ui-sref-active='active' ui-sref='.content' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Content</a>
+				<a ui-sref-active='active' ui-sref='.agent' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Agent</a>
 			</div>
 		</div>
-		<form id='newGameForm' ng-submit='addGame()'>
+		<form name='newGameForm' id='newGameForm' ng-submit='addGame()' novalidate>
 			<div id='form-views' ui-view></div>
 		</form>
 	</div>
