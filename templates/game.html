@@ -63,15 +63,15 @@ Agent note
 	<div id='form-container'>
 		<div class='page-header text-center'>
 			<div id='status-buttons buttons' class='text-center'>
-				<a ui-sref-active='active' ui-sref='.required' class="btn btn-sm">Required</a>
-				<a ui-sref-active='active' ui-sref='.entity' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Game</a>
-				<a ui-sref-active='active' ui-sref='.platform' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Platform</a>		
-				<a ui-sref-active='active' ui-sref='.franchise' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Franchise</a>
-				<a ui-sref-active='active' ui-sref='.distribution' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Distribution Package</a>
-				<a ui-sref-active='active' ui-sref='.release' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Local Release</a>
-				<a ui-sref-active='active' ui-sref='.series' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Series</a>
-				<a ui-sref-active='active' ui-sref='.content' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Content</a>
-				<a ui-sref-active='active' ui-sref='.agent' class="btn btn-sm" ng-disabled='newGameForm.$invalid'>Agent</a>
+				<button ui-sref-active='active' ui-sref='.required' class="btn btn-xs">Required</button>
+				<button ui-sref-active='active' ui-sref='.entity' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Game</button>
+				<button ui-sref-active='active' ui-sref='.platform' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Platform</button>
+				<button ui-sref-active='active' ui-sref='.franchise' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Franchise</button>
+				<button ui-sref-active='active' ui-sref='.distribution' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Distribution Package</button>
+				<button ui-sref-active='active' ui-sref='.release' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Local Release</button>
+				<button ui-sref-active='active' ui-sref='.series' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Series</button>
+				<button ui-sref-active='active' ui-sref='.content' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Content</button>
+				<button ui-sref-active='active' ui-sref='.agent' class="btn btn-xs" ng-disabled='newGameForm.$invalid'>Agent</button>
 			</div>
 		</div>
 		<form name='newGameForm' id='newGameForm' ng-submit='addGame()' novalidate>

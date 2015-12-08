@@ -64,12 +64,7 @@ form h3 {
     font-family: 'Press Start 2P', cursive;
 }
 
-#buttons {
-    margin-top: 5%;
-    text-align: center;
-}
-
-#buttons .btn {
+#form-container button {
     background-color: #363636;
     border-color: transparent;
     color: white;
