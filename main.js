@@ -108,6 +108,10 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 		$scope.currentUserInfo = false;
 		$scope.logInFailureMessage = '';
 	};
+
+	$(document).ready(function() {
+    	$('[data-toggle="popover"]').popover();
+	});
 });
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
@@ -117,45 +121,54 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: 'templates/profile.html',
 		controller: 'ProfileController'
 	})
-	.state('new-game', {
-		url: '/new-game',
-		templateUrl: 'templates/new-game.html',
+	.state('game', {
+		url: '/game',
+		templateUrl: 'templates/game.html',
 		controller: 'NewGameController'
 	})
-	.state('game-entity', {
-		url: '/game-entity',
-		templateUrl: 'templates/game-entity.html',
-		controller: 'GameEntityController'
+	.state('game.required', {
+		url: '/required',
+		templateUrl: 'templates/game-required.html'
+	})	
+	.state('game.entity', {
+		url: '/entity',
+		templateUrl: 'templates/game-entity.html'
+		// ,controller: 'GameEntityController'
 	})
-	.state('franchise-entity', {
-		url: '/franchise-entity',
-		templateUrl: 'templates/franchise-entity.html',
-		controller: 'FranchiseEntityController'
+	.state('game.platform', {
+		url: '/platform',
+		templateUrl: 'templates/game-platform.html'
+		//,controller: 'FranchiseEntityController'
+	})	
+	.state('game.franchise', {
+		url: '/franchise',
+		templateUrl: 'templates/game-franchise.html'
+		//,controller: 'FranchiseEntityController'
 	})
-	.state('distribution-package-entity', {
-		url: '/distribution-package-entity',
-		templateUrl: 'templates/distribution-package-entity.html',
-		controller: 'DistributionPackageEntityController'
+	.state('game.distribution', {
+		url: '/distribution',
+		templateUrl: 'templates/game-distribution.html'
+		//, controller: 'DistributionPackageEntityController'
 	})
-	.state('local-release-entity', {
-		url: '/local-release-entity',
-		templateUrl: 'templates/local-release-entity.html',
-		controller: 'LocalReleaseEntityController'
+	.state('game.release', {
+		url: '/release',
+		templateUrl: 'templates/game-release.html'
+		//, controller: 'LocalReleaseEntityController'
 	})
-	.state('series-entity', {
-		url: '/series-entity',
-		templateUrl: 'templates/series-entity.html',
-		controller: 'SeriesEntityController'
+	.state('game.series', {
+		url: '/series',
+		templateUrl: 'templates/game-series.html'
+		//, controller: 'SeriesEntityController'
 	})
-	.state('collection-entity', {
-		url: '/collection-entity',
-		templateUrl: 'templates/collection-entity.html',
-		controller: 'CollectionEntityController'
+	.state('game.content', {
+		url: '/content',
+		templateUrl: 'templates/game-content.html'
+		//, controller: 'CollectionEntityController'
 	})
-	.state('agent-entity', {
-		url: '/agent-entity',
-		templateUrl: 'templates/agent-entity.html',
-		controller: 'AgentEntityController'
+	.state('game.agent', {
+		url: '/agent',
+		templateUrl: 'templates/game-agent.html'
+		//, controller: 'AgentEntityController'
 	})
 })
 
@@ -164,10 +177,10 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 })
 
 .controller('NewGameController', function($scope) {
-	$scope.title = "Required";
-	$(document).ready(function() {
-    	$('[data-toggle="popover"]').popover();
-	});
+	$scope.gameData = {};
+	// $(document).ready(function() {
+ //    	$('[data-toggle="popover"]').popover();
+	// });
 	//$('form').parsley();
 	//$(function () {
   	//	var $sections = $('.form-section');
@@ -202,103 +215,171 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   	//	navigateTo(0);
 	//})
 
-})
-
-	.controller('GameEntityController', function($scope){
-		$scope.title = "Game";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-	})
-	.controller('FranchiseEntityController', function($scope){
-		$scope.title = "Franchise";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-	})
-	.controller('DistributionPackageEntityController', function($scope){
-		$scope.title = "Distribution Package";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-	})
-	.controller('LocalReleaseEntityController', function($scope){
-		$scope.title = "Local Release";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-	})
-	.controller('SeriesEntityController', function($scope){
-		$scope.title = "Series";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-	})
-	.controller('CollectionEntityController', function($scope){
-		$scope.title = "Collection";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-	})
-	.controller('AgentEntityController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject){
-		$scope.title = "Agent";
-		$(document).ready(function() {
-    		$('[data-toggle="popover"]').popover();
-		});
-
-		$scope.addGame = function() {
-			$scope.entries[$scope.userId] = {
-				title: $scope.gameTitle,
-				genre: $scope.gameplayGenre,
-				platform: $scope.gamePlatform,
-				numberOfPlayers: $scope.numPlayers,
-				regionCode: $scope.regionCode,
-				format: $scope.gameFormat,
-				releaseDate: $scope.retailRelease,
-				corporateBody: $scope.corporateBody,
-				genre: $scope.narrativeGenre,
-				summary: $scope.gameSummary,
-				theme: $scope.theme,
-				world: $scope.gameWorld,
-				place: $scope.gamePlace,
-				time: $scope.gameTime,
-				mood: $scope.gameMood,
-				battleSystem: $scope.battleSystems,
-				inGameClock: $scope.inGameClock,
-				inGameClockYN: $scope.inGameClockYN,
-				progression: $scope.progression,
-				tropes: $scope.gameTropes,
-				packshot: $scope.packshot,
-				notes: $scope.gameNote,
-				franchise: $scope.franchise,
-				franchiseNotes: $scope.franchiseNote,
-				distributionType: $scope.distType,
-				fileType: $scope.fileType,
-				fileSize: $scope.fileSize,
-				representativeArt: $scope.repArt,
-				packaging: $scope.packaging,
-				drm: $scope.gameDRM,
-				priceMSRP: $scope.priceMSRP,
-				distributionEntityNotes: $scope.distEntityNote,
-				languages: $scope.languages,
-				editionNotes: $scope.editionNote,
-				difficultyLevels: $scope.difficultyLevels,
-				customizableCharacters: $scope.custChar,
-				rating: $scope.gameRating,
-				screenshots: $scope.screenshots,
-				videos: $scope.gameplayVids,
-				version: $scope.versionInfo,
-				themeNotes: $scope.gameThemeNote,
-				seriesTitle: $scope.seriesTitle,
-				contentName: $scope.contentName,
-				contentType: $scope.contentType,
-				versionRequirements: $scope.versionReq,
-				contentNotes: $scope.contentNote,
-				agentNotes: $scope.agentNote
-			};
-			$scope.entries.save();
+	$scope.addGame = function() {
+		$scope.entries[$scope.userId] = {
+			title: $scope.gameData.gameTitle,
+			genre: $scope.gameData.gameplayGenre,
+			platform: $scope.gameData.gamePlatform,
+			numberOfPlayers: $scope.gameData.numPlayers,
+			regionCode: $scope.gameData.regionCode,
+			format: $scope.gameData.gameFormat,
+			releaseDate: $scope.gameData.retailRelease,
+			corporateBody: $scope.gameData.corporateBody,
+			genre: $scope.gameData.narrativeGenre,
+			summary: $scope.gameData.gameSummary,
+			theme: $scope.gameData.theme,
+			world: $scope.gameData.gameWorld,
+			place: $scope.gameData.gamePlace,
+			time: $scope.gameData.gameTime,
+			mood: $scope.gameData.gameMood,
+			battleSystem: $scope.gameData.battleSystems,
+			inGameClock: $scope.gameData.inGameClock,
+			inGameClockYN: $scope.gameData.inGameClockYN,
+			progression: $scope.gameData.progression,
+			tropes: $scope.gameData.gameTropes,
+			packshot: $scope.gameData.packshot,
+			notes: $scope.gameData.gameNote,
+			editionInfo: $scope.gameData.editionInfo,
+			systemRequirements: $scope.gameData.systemReq,
+			specialHardware: $scope.gameData.hardware,
+			networkedFeatures: $scope.gameData.networkedFeat,
+			connectivityMethod: $scope.gameData.connectMethod,
+			networkType: $scope.gameData.networkType,
+			bandwidth: $scope.gameData.bandwidth,
+			ending: $scope.gameData.endingYN,
+			multipleEndings: $scope.gameData.multEndings,
+			postGameContent: $scope.gameData.postGameContent,
+			estimatedTimeOfCompletion: $scope.gameData.estimatedTime,
+			visualStyle: $scope.gameData.visualStyle,
+			dimension: $scope.gameData.dimension,
+			pointOfView: $scope.gameData.pov,
+			trailers: $scope.gameData.trailers,
+			editionNotes: $scope.gameData.editionNote,
+			franchise: $scope.gameData.franchise,
+			franchiseNotes: $scope.gameData.franchiseNote,
+			distributionType: $scope.gameData.distType,
+			fileType: $scope.gameData.fileType,
+			fileSize: $scope.gameData.fileSize,
+			representativeArt: $scope.gameData.repArt,
+			packaging: $scope.gameData.packaging,
+			drm: $scope.gameData.gameDRM,
+			priceMSRP: $scope.gameData.priceMSRP,
+			distributionEntityNotes: $scope.gameData.distEntityNote,
+			languages: $scope.gameData.languages,
+			editionNotes: $scope.gameData.editionNote,
+			difficultyLevels: $scope.gameData.difficultyLevels,
+			customizableCharacters: $scope.gameData.custChar,
+			rating: $scope.gameData.gameRating,
+			screenshots: $scope.gameData.screenshots,
+			videos: $scope.gameData.gameplayVids,
+			version: $scope.gameData.versionInfo,
+			themeNotes: $scope.gameData.gameThemeNote,
+			seriesTitle: $scope.gameData.seriesTitle,
+			contentName: $scope.gameData.contentName,
+			contentType: $scope.gameData.contentType,
+			versionRequirements: $scope.gameData.versionReq,
+			contentNotes: $scope.gameData.contentNote,
+			agentNotes: $scope.gameData.agentNote
 		};
-	});
+		$scope.entries.save();
+	};
+});
+
+	// .controller('GameEntityController', function($scope){
+	// 	$scope.title = "Game";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+	// })
+	// .controller('FranchiseEntityController', function($scope){
+	// 	$scope.title = "Franchise";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+	// })
+	// .controller('DistributionPackageEntityController', function($scope){
+	// 	$scope.title = "Distribution Package";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+	// })
+	// .controller('LocalReleaseEntityController', function($scope){
+	// 	$scope.title = "Local Release";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+	// })
+	// .controller('SeriesEntityController', function($scope){
+	// 	$scope.title = "Series";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+	// })
+	// .controller('CollectionEntityController', function($scope){
+	// 	$scope.title = "Collection";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+	// })
+	// .controller('AgentEntityController', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject){
+	// 	$scope.title = "Agent";
+	// 	$(document).ready(function() {
+ //    		$('[data-toggle="popover"]').popover();
+	// 	});
+
+	// 	$scope.addGame = function() {
+	// 		$scope.entries[$scope.userId] = {
+	// 			title: $scope.gameTitle,
+	// 			genre: $scope.gameplayGenre,
+	// 			platform: $scope.gamePlatform,
+	// 			numberOfPlayers: $scope.numPlayers,
+	// 			regionCode: $scope.regionCode,
+	// 			format: $scope.gameFormat,
+	// 			releaseDate: $scope.retailRelease,
+	// 			corporateBody: $scope.corporateBody,
+	// 			genre: $scope.narrativeGenre,
+	// 			summary: $scope.gameSummary,
+	// 			theme: $scope.theme,
+	// 			world: $scope.gameWorld,
+	// 			place: $scope.gamePlace,
+	// 			time: $scope.gameTime,
+	// 			mood: $scope.gameMood,
+	// 			battleSystem: $scope.battleSystems,
+	// 			inGameClock: $scope.inGameClock,
+	// 			inGameClockYN: $scope.inGameClockYN,
+	// 			progression: $scope.progression,
+	// 			tropes: $scope.gameTropes,
+	// 			packshot: $scope.packshot,
+	// 			notes: $scope.gameNote,
+	// 			franchise: $scope.franchise,
+	// 			franchiseNotes: $scope.franchiseNote,
+	// 			distributionType: $scope.distType,
+	// 			fileType: $scope.fileType,
+	// 			fileSize: $scope.fileSize,
+	// 			representativeArt: $scope.repArt,
+	// 			packaging: $scope.packaging,
+	// 			drm: $scope.gameDRM,
+	// 			priceMSRP: $scope.priceMSRP,
+	// 			distributionEntityNotes: $scope.distEntityNote,
+	// 			languages: $scope.languages,
+	// 			editionNotes: $scope.editionNote,
+	// 			difficultyLevels: $scope.difficultyLevels,
+	// 			customizableCharacters: $scope.custChar,
+	// 			rating: $scope.gameRating,
+	// 			screenshots: $scope.screenshots,
+	// 			videos: $scope.gameplayVids,
+	// 			version: $scope.versionInfo,
+	// 			themeNotes: $scope.gameThemeNote,
+	// 			seriesTitle: $scope.seriesTitle,
+	// 			contentName: $scope.contentName,
+	// 			contentType: $scope.contentType,
+	// 			versionRequirements: $scope.versionReq,
+	// 			contentNotes: $scope.contentNote,
+	// 			agentNotes: $scope.agentNote
+	// 		};
+	// 		$scope.entries.save();
+	// 	};
+	// });
 
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
