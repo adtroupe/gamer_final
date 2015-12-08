@@ -2,6 +2,7 @@ var myApp = angular.module('myApp', ['firebase', 'ui.router']);
 
 myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
 
+	var addGameClicked = false;
 	var ref = new Firebase('https://uw-gamer.firebaseio.com/');
 	$scope.ref = ref;
 
