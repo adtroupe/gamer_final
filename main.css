@@ -166,16 +166,6 @@ form h3 {
     color: white;
 }
 
-@media screen and (min-width: 768px) {
-    .container h1 {
-        font-size: 72px;
-    }
-
-    .container h2 {
-        font-size: 24px;
-    }
-}
-
 .form-group span, span:hover {
     font-weight: bold;
     color: #ff581c;
@@ -195,6 +185,21 @@ form h3 {
 
 .popover.right .arrow:after {
     border-right-color: #363636;
+}
+
+@media screen and (min-width: 768px) {
+    .container h1 {
+        font-size: 72px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .form-section {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }
 
 @media screen and (min-width: 1200px) {
