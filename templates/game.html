@@ -1,0 +1,81 @@
+<!--
+http://gamer.ischool.uw.edu/wp-content/uploads/2015/07/UWSIMMschemaVersion3.1_20150710.pdf
+Game Title [M]
+Gameplay genre [M][R]
+Platform [M][R]
+Number of Players [M][R]
+Region code [M][R]
+Format [M]
+Retail release date [M][R]
+Corporate body [M][R]
+
+Narrative genre [R]
+Summary
+Theme [R]
+Setting [R]
+Mood [R]
+Pacing [R]
+Progression
+Tropes [R]
+Packshot
+Game Note
+Edition information
+System requirements [R]
+Special Hardware [R]
+Networked features [R]
+Connectivity [R]
+Type of ending
+Estimated time of completion
+Visual Style [R]
+Dimension
+Point of View
+Trailers [R]
+Edition note
+Language [R]
+Customization options
+Rating [R]
+Screenshots [R]
+Gameplay videos [R]
+Version information
+Local release note
+Distribution type
+File type
+File size
+Representative art[R]
+Packaging
+DRM [R]
+Price/MSRP [R]
+Distrubution entity note
+Franchise [R]
+Franchise note
+Series title [R]
+Series note
+Content name [R]
+Content type [R]
+Version requirement
+Additional content note
+Collection title
+Collection note
+Agent note
+-->
+
+<div>
+	<div id='form-container'>
+		<div class='page-header text-center'>
+			<div id='status-buttons buttons' class='text-center'>
+				<a ui-sref-active='active' ui-sref='.required' class="btn btn-sm">Required</a>
+				<a ui-sref-active='active' ui-sref='.entity' class="btn btn-sm">Game</a>
+				<a ui-sref-active='active' ui-sref='.platform' class="btn btn-sm">Platform</a>		
+				<a ui-sref-active='active' ui-sref='.franchise' class="btn btn-sm">Franchise</a>
+				<a ui-sref-active='active' ui-sref='.distribution' class="btn btn-sm">Distribution Package</a>
+				<a ui-sref-active='active' ui-sref='.release' class="btn btn-sm">Local Release</a>
+				<a ui-sref-active='active' ui-sref='.series' class="btn btn-sm">Series</a>
+				<a ui-sref-active='active' ui-sref='.content' class="btn btn-sm">Content</a>
+				<a ui-sref-active='active' ui-sref='.agent' class="btn btn-sm">Agent</a>
+			</div>
+		</div>
+		<form id='newGameForm' ng-submit='addGame()'>
+			<div id='form-views' ui-view></div>
+		</form>
+	</div>
+</div>
