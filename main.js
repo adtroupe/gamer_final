@@ -166,6 +166,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 })
 
 .controller('NewGameController', function($scope) {
+	$scope.requiredPercentage = 10;
+	$scope.otherPercentage = 40;
+	$scope.remainingPercentage=50;
 	$scope.gameData = {};
 
 	$scope.addGame = function() {

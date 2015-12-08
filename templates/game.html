@@ -78,4 +78,16 @@ Agent note
 			<div id='form-views' ui-view></div>
 		</form>
 	</div>
+
+	<div class="progress">
+		<div class="progress-bar progress-bar-success" role="progressbar" style="width:{{requiredPercentage}}%">
+			Required Fields
+		</div>
+		<div class="progress-bar progress-bar-info" role="progressbar" style="width:{{otherPercentage}}%">
+			The Rest
+		</div>
+		<div class="progress-bar progress-bar-danger" role="progressbar" style="width:{{remainingPercentage}}%">
+			Fields Remaining
+		</div>
+	</div>
 </div>

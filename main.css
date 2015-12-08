@@ -161,7 +161,7 @@ form h3 {
 }
 
 .form-group {
-  min-height: 36px;
+  min-height: 2em;
 }
 
 .form-group span, span:hover {
@@ -185,6 +185,11 @@ form h3 {
     border-right-color: #363636;
 }
 
+.progress {
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
 @media screen and (min-width: 768px) {
     .container h1 {
         font-size: 72px;
@@ -194,10 +199,10 @@ form h3 {
         font-size: 24px;
     }
 
-    .form-section {
-        margin-left: 5em;
-        margin-right: 5em;
-    }
+    /*.form-section {*/
+        /*margin-left: 5em;*/
+        /*margin-right: 5em;*/
+    /*}*/
 }
 
 @media screen and (min-width: 1200px) {
