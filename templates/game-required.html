@@ -3,149 +3,166 @@
 
 <!-- Game Title -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="gameTitle">Game Title *:</label>
-    <div class="col-sm-8">
-        <a href="#" data-toggle="tooltip" title="Please enter the full title">
-        <input ng-model='gameData.gameTitle' type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title" required></a>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Game Title" data-content="Transcribed title: Transcribe the title as it appears on the Chief Source
-        of Information (CSI). When different titles are used in the CSI,
-        transcribe the most prominently displayed title. When it is unclear which
-        title is most prominent, transcribe the most frequently occuring iteration
-        of the title used in the CSI.
-        Enter variant titles under Alternative title. Enter commonly used
-        shortened versions of transcribed titles under Abbreviated title. For
-        titles commonly used in conversation, use Colloquial title.
-        When the title is in a language other than English, transcribe it in the
-        original language. When the title is written in multiple languages,
-        transcribe it as it appears in those languages.
-        When there is no title, or the title is unknown, specify unknown. Do
-        not correct errors, if any, but denote the errors with [sic]. "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="gameTitle">Game Title *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <a href="#" data-toggle="tooltip" title="Please enter the full title">
+            <input ng-model='gameData.gameTitle' type="title" class="form-control" id="gameTitle" placeholder="Enter Game Title" required></a>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Game Title" data-content="Transcribed title: Transcribe the title as it appears on the Chief Source
+            of Information (CSI). When different titles are used in the CSI,
+            transcribe the most prominently displayed title. When it is unclear which
+            title is most prominent, transcribe the most frequently occuring iteration
+            of the title used in the CSI.
+            Enter variant titles under Alternative title. Enter commonly used
+            shortened versions of transcribed titles under Abbreviated title. For
+            titles commonly used in conversation, use Colloquial title.
+            When the title is in a language other than English, transcribe it in the
+            original language. When the title is written in multiple languages,
+            transcribe it as it appears in those languages.
+            When there is no title, or the title is unknown, specify unknown. Do
+            not correct errors, if any, but denote the errors with [sic]. "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Gameplay Genre -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="gameplayGenre">Gameplay Genre *:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameplayGenre' type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre" required>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Genre" data-content="Determine gameplay genre from the primary and secondary CSI. Select
-        the most appropriate term(s) from the controlled vocabulary at the most
-        specific level possible. Select up to three terms.  "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="gameplayGenre">Gameplay Genre *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameplayGenre' type="title" class="form-control" id="gameplayGenre" placeholder="Enter Gameplay Genre" required>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Genre" data-content="Determine gameplay genre from the primary and secondary CSI. Select
+            the most appropriate term(s) from the controlled vocabulary at the most
+            specific level possible. Select up to three terms.  "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Platform -->
-<div class="form-group">
-    <label class="control-label col-sm-2" for="platform">Platform *:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gamePlatform' type="title" class="form-control" id="platform" placeholder="Enter Platform" required>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Platform" data-content="The hardware and operating system on which the video game was
-        designed to be played. "><span class="glyphicons glyphicons-plus">+</span></a>
+<div class="col-xs-12">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-sm-2" for="platform">Platform *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gamePlatform' type="title" class="form-control" id="platform" placeholder="Enter Platform" required>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Platform" data-content="The hardware and operating system on which the video game was
+            designed to be played. "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Number of Players -->
-<div class="form-group">
-    <label class="control-label col-sm-2" for="sell">Number of Players *:</label>
-    <div class="col-sm-8">
-        <select ng-model='gameData.numPlayers' class="form-control" id="sell" required>
-            <option></option>
-            <option>1</option>
-            <option>1-2</option>
-            <option>1-2 [local cooperative]</option>
-            <option>1-2 [online competitive]</option>
-            <option>1-4</option>
-            <option>1-4 [local cooperative]</option>
-            <option>1-4 [online competitive]</option>
-            <option>1-8</option>
-            <option>1-8 [local cooperative]</option>
-            <option>1-8 [online competitive]</option>
-            <option>1-many</option>
-            <option>1-many [local cooperative]</option>
-            <option>1-many [online competitive]</option>
-            <option>unknown</option>
-        </select>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Number of Players" data-content="Determine the number of players based on the CSI. Indicate in the field
-        the maximum range of concurrent players (e.g. 1, 1-2, 1-8). If the video
-        game is massively multiplayer, indicate '1-many' in the field. If the
-        video game has additional modes (e.g. local or online competitive/
-        cooperative modes) record the number of players for those modes by
-        repeating the element. If the number of players is unknown, record
-        unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+<div class="col-xs-12">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-sm-2" for="sell">Number of Players *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <select ng-model='gameData.numPlayers' class="form-control" id="sell" required>
+                <option></option>
+                <option>1</option>
+                <option>1-2</option>
+                <option>1-2 [local cooperative]</option>
+                <option>1-2 [online competitive]</option>
+                <option>1-4</option>
+                <option>1-4 [local cooperative]</option>
+                <option>1-4 [online competitive]</option>
+                <option>1-8</option>
+                <option>1-8 [local cooperative]</option>
+                <option>1-8 [online competitive]</option>
+                <option>1-many</option>
+                <option>1-many [local cooperative]</option>
+                <option>1-many [online competitive]</option>
+                <option>unknown</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Number of Players" data-content="Determine the number of players based on the CSI. Indicate in the field
+            the maximum range of concurrent players (e.g. 1, 1-2, 1-8). If the video
+            game is massively multiplayer, indicate '1-many' in the field. If the
+            video game has additional modes (e.g. local or online competitive/
+            cooperative modes) record the number of players for those modes by
+            repeating the element. If the number of players is unknown, record
+            unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!--Region Code -->
-<div class="form-group">
-    <label class="control-label col-sm-2" for="regionCode">Region Code *:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.regionCode' type="title" class="form-control" id="regionCode" placeholder="Enter Region Code" required>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Region Code" data-content="Transcribe the region code(s) as they appear on the CSI. On physical
-        cases, they may be located on the back or spine of the case. On physical
-        discs or cartridges, they may be located on the front side of the medium.
-        If the secondary sources confirm that the item is not region-specific,
-        record region-free?. If the classification code is unknown, record
-        unknown ."><span class="glyphicons glyphicons-plus">+</span></a>
+<div class="col-xs-12">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-sm-2" for="regionCode">Region Code *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.regionCode' type="title" class="form-control" id="regionCode" placeholder="Enter Region Code" required>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Region Code" data-content="Transcribe the region code(s
+            ) as they appear on the CSI. On physical
+            cases, they may be located on the back or spine of the case. On physical
+            discs or cartridges, they may be located on the front side of the medium.
+            If the secondary sources confirm that the item is not region-specific,
+            record region-free?. If the classification code is unknown, record
+            unknown ."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Format -->
-<div class="form-group">
-    <label class="control-label col-sm-2" for="sell">Format *:</label>
-    <div class="col-sm-8">
-        <select ng-model='gameData.gameFormat' class="form-control" id="sell" required>
-            <option></option>
-            <option>cartridge</option>
-            <option>optical</option>
-            <option>magnetic</option>
-            <option>unknown</option>
-        </select>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Format" data-content="Determine the media format by examining the physical object. Select
-        the most appropriate format from the following list: cartridge, optical,
-        magnetic, unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+<div class="col-xs-12">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-sm-2" for="sell">Format *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <select ng-model='gameData.gameFormat' class="form-control" id="sell" required>
+                <option></option>
+                <option>cartridge</option>
+                <option>optical</option>
+                <option>magnetic</option>
+                <option>unknown</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Format" data-content="Determine the media format by examining the physical object. Select
+            the most appropriate format from the following list: cartridge, optical,
+            magnetic, unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Retail Release Date -->
-<div class="form-group">
-    <label class="control-label col-sm-2" for="retailRelease">Retail Release Date *:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.retailRelease' type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date" required>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Retail Release Date" data-content="Determine the release date from the CSI, and record it following the
-        ISO 8601 Standard8
-        (i.e., YYYY-MM-DD) with the source and the date
-        when this information was acquired. If unknown, record unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+<div class="col-xs-12">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-sm-2" for="retailRelease">Retail Release Date *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.retailRelease' type="title" class="form-control" id="retailRelease" placeholder="Enter Retail Release Date" required>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Retail Release Date" data-content="Determine the release date from the CSI, and record it following the
+            ISO 8601 Standard8
+            (i.e., YYYY-MM-DD) with the source and the date
+            when this information was acquired. If unknown, record unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Corporate Body -->
-<div class="form-group">
-    <label class="control-label col-sm-2" for="corporateBody">Corporate Body *:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.corporateBody' type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body" required>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Corporate Body" data-content="Determine the responsible corporate body by consulting the CSI. If
-        available, record the full name of the corporate body. Transcribe the
-        information as it appears in the CSI and denote as [transcribed]. If the
-        corporate body information is not available, record unknown. Select
-        and specify the role of the corporate body along with the name of the
-        corporate body: developer, publisher, distributor, licensor, or licensee.
-        When the role of the corporate body is unknown, record unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+<div class="col-xs-12">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-sm-2" for="corporateBody">Corporate Body *:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.corporateBody' type="title" class="form-control" id="corporateBody" placeholder="Enter Corporate Body" required>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Corporate Body" data-content="Determine the responsible corporate body by consulting the CSI. If
+            available, record the full name of the corporate body. Transcribe the
+            information as it appears in the CSI and denote as [transcribed]. If the
+            corporate body information is not available, record unknown. Select
+            and specify the role of the corporate body along with the name of the
+            corporate body: developer, publisher, distributor, licensor, or licensee.
+            When the role of the corporate body is unknown, record unknown."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
