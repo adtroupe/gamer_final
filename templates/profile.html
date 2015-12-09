@@ -18,7 +18,7 @@
 			    	<th>Name of Game</th>
 			    	<th>Date added</th>
 			    </tr>
-			    <tr ng-repeat='entry in entries | limitTo: 10 | filter : {contributor : userId}'>
+			    <tr ng-repeat='entry in entriesArray | limitTo: 10 | filter : {contributor : userId}'>
 				    <td class='userEntries'>{{$index + 1}}</td>
 				    <td class='userEntries'>{{entry.title}}</td>		
 				   	<td class='userEntries'>{{entry.dateUpdated}}</td>
