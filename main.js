@@ -2,6 +2,7 @@ var myApp = angular.module('myApp', ['firebase', 'ui.router']);
 
 myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $firebaseObject) {
 
+
 	var addGameClicked = true;
 	var ref = new Firebase('https://uw-gamer.firebaseio.com/');
 	$scope.ref = ref;
@@ -167,12 +168,18 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 })
 
 .controller('NewGameController', function($scope) {
+
+
 	$scope.requiredPercentage = 10;
 	$scope.otherPercentage = 40;
 	$scope.remainingPercentage=50;
 	$scope.gameData = {};
 
+    
+    
+
 	$scope.addGame = function() {
+
 		if ($scope.gameData.gameTitle != undefined) {
 			$scope.entries[$scope.gameData.gameTitle] = {
 				contributor: $scope.userId,
@@ -324,9 +331,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 	}
 });
 
-// 	$(document).ready(function() {
-//    	$('[data-toggle="popover"]').popover();
-// 	});
+ 	$(document).ready(function() {
+    	$('[data-toggle="popover"]').popover();
+ 	});
 
 	
 //jQuery time
