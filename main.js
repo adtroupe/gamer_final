@@ -243,7 +243,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 				agentNotes: $scope.isNull($scope.gameData.agentNote)
 				};
 			$scope.entries.$save()
-			.then($scope.clearGame());
+			.then($scope.clearGame())
+			.then(window.location.href = '/');
 		}
 	};
 
