@@ -3,122 +3,136 @@
 
 <!-- Language -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="language">Language:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.languages' type="title" class="form-control" id="language" placeholder="Enter Language">
-        <input ng-model='gameData.editionNote' type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Language" data-content="List all the primary language(s) in which the video game conveys
-                information. When users can change language settings, provide all the
-                available language options. Use the appropriate language code from ISO
-                6397
-                . If no language code is available use Ã¢â‚¬Å“OTÃ¢â‚¬? for other."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="language">Language:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.languages' type="title" class="form-control" id="language" placeholder="Enter Language">
+            <input ng-model='gameData.editionNote' type="title" class="form-control" id="editionNote" placeholder="Enter Edition Note">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Language" data-content="List all the primary language(s) in which the video game conveys
+                    information. When users can change language settings, provide all the
+                    available language options. Use the appropriate language code from ISO
+                    6397
+                    . If no language code is available use Ã¢â‚¬Å“OTÃ¢â‚¬? for other."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Customization Options -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="customizationOptions">Customization Options:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.difficultyLevels' type="title" class="form-control" id="customizationOptions" placeholder="List Difficulty Levels">
-        <input ng-model='gameData.custChar' type="title" class="form-control" id="customizationOptions" placeholder="Can you customize characters?">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Customization Options" data-content="Determine the options for customizing the Difficulty level and
-                Character from the CSI. Transcribe the different options for the
-                Difficulty level, as given in the video game (e.g., insanity, god
-                mode). Select yes or no to indicate the possibility of Character
-                customization."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="customizationOptions">Customization Options:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.difficultyLevels' type="title" class="form-control" id="customizationOptions" placeholder="List Difficulty Levels">
+            <input ng-model='gameData.custChar' type="title" class="form-control" id="customizationOptions" placeholder="Can you customize characters?">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Customization Options" data-content="Determine the options for customizing the Difficulty level and
+                    Character from the CSI. Transcribe the different options for the
+                    Difficulty level, as given in the video game (e.g., insanity, god
+                    mode). Select yes or no to indicate the possibility of Character
+                    customization."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Rating -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="rating">Rating:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameRating' type="title" class="form-control" id="rating" placeholder="Enter Rating">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Rating" data-content="Transcribe the rating as it appears on the CSI. When the rating is
-                unknown, or the video game existed before current rating system(s),
-                specify unknown. Transcribe all information pertaining to the rating
-                starting with the rating organization (such as ESRB) and including the
-                audience (such as M (Mature 17+)) as well as the reason(s) listed
-                alongside the rating information (for example Blood and Gore. Nudity.
-                Violence.). "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="rating">Rating:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameRating' type="title" class="form-control" id="rating" placeholder="Enter Rating">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Rating" data-content="Transcribe the rating as it appears on the CSI. When the rating is
+                    unknown, or the video game existed before current rating system(s),
+                    specify unknown. Transcribe all information pertaining to the rating
+                    starting with the rating organization (such as ESRB) and including the
+                    audience (such as M (Mature 17+)) as well as the reason(s) listed
+                    alongside the rating information (for example Blood and Gore. Nudity.
+                    Violence.). "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Screenshots -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="screenshots">Screenshots:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.screenshots' type="title" class="form-control" id="screenshots" placeholder="Enter Screenshots">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Screenshots" data-content="Obtain screenshots from the CSI that represent the visual experience of
-                the video game, focusing on the main gameplay. Gameplay screenshots
-                should include the video gameÃ¢â‚¬â„¢s user interface; if more than one user
-                interface is typically encountered by the player (e.g., a combat HUD and
-                an inventory screen), include a shot of each configuration.
-                In order of preference, screenshots should represent the following: 1)
-                main gameplay, ideally from sequences which represent significant
-                phases of the video game; 2) title screens; 3) significant cutscenes; 4)
-                stills that capture other notable aspects of the work (e.g., Easter eggs,
-                unique credits sequences, storytelling hooks, well-known graphics
-                glitches, or examples of the overall art/visual style). When possible
-                during gameplay or cutscenes, include subtitles in screenshots.
-                At a minimum, one to two screenshots should be taken during main
-                gameplay, ideally from sequences which reflect the majority of
-                situations.
-                Create and preserve the images according to your organization's
-                standards. Upload or indicate the location of the image(s) according to
-                your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="screenshots">Screenshots:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.screenshots' type="title" class="form-control" id="screenshots" placeholder="Enter Screenshots">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Screenshots" data-content="Obtain screenshots from the CSI that represent the visual experience of
+                    the video game, focusing on the main gameplay. Gameplay screenshots
+                    should include the video gameÃ¢â‚¬â„¢s user interface; if more than one user
+                    interface is typically encountered by the player (e.g., a combat HUD and
+                    an inventory screen), include a shot of each configuration.
+                    In order of preference, screenshots should represent the following: 1)
+                    main gameplay, ideally from sequences which represent significant
+                    phases of the video game; 2) title screens; 3) significant cutscenes; 4)
+                    stills that capture other notable aspects of the work (e.g., Easter eggs,
+                    unique credits sequences, storytelling hooks, well-known graphics
+                    glitches, or examples of the overall art/visual style). When possible
+                    during gameplay or cutscenes, include subtitles in screenshots.
+                    At a minimum, one to two screenshots should be taken during main
+                    gameplay, ideally from sequences which reflect the majority of
+                    situations.
+                    Create and preserve the images according to your organization's
+                    standards. Upload or indicate the location of the image(s) according to
+                    your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Gameplay Videos -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="gameplay">Gameplay Videos:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameplayVids' type="title" class="form-control" id="gameplay" placeholder="Enter Gameplay Videos">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Videos" data-content="Transcribe the URLs to gameplay videos as found on the CSI. Include
-                the retrieved date information. If possible, provide links to official
-                gameplay videos on YouTube channels, etc. This element provides
-                actual, in-game video information, not trailers or openings of video
-                games. Indicate when there is potential spoiling of video games in those
-                videos through the spoiler attribute (Y/N).
-                If available, record the video, if licensed to use by your organization.
-                Create and preserve the videos according to your organization's
-                standards. Upload or indicate the location of the video(s) according to
-                your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="gameplay">Gameplay Videos:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameplayVids' type="title" class="form-control" id="gameplay" placeholder="Enter Gameplay Videos">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Gameplay Videos" data-content="Transcribe the URLs to gameplay videos as found on the CSI. Include
+                    the retrieved date information. If possible, provide links to official
+                    gameplay videos on YouTube channels, etc. This element provides
+                    actual, in-game video information, not trailers or openings of video
+                    games. Indicate when there is potential spoiling of video games in those
+                    videos through the spoiler attribute (Y/N).
+                    If available, record the video, if licensed to use by your organization.
+                    Create and preserve the videos according to your organization's
+                    standards. Upload or indicate the location of the video(s) according to
+                    your organization's system design."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Version Information -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="versionInformation">Version Information:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.versionInfo' type="title" class="form-control" id="versionInformation" placeholder="Enter Version Information">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Version Information" data-content="Enter the version number of the video game being cataloged, if
-                available."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="versionInformation">Version Information:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.versionInfo' type="title" class="form-control" id="versionInformation" placeholder="Enter Version Information">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Version Information" data-content="Enter the version number of the video game being cataloged, if
+                    available."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Local Release Note -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="theme">Theme:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameThemeNote' type="title" class="form-control" id="theme" placeholder="Enter Theme">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Local Release Note" data-content="Record notable or unique characteristics of the local release of the video
-                game edition, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="theme">Theme:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameThemeNote' type="title" class="form-control" id="theme" placeholder="Enter Theme">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Local Release Note" data-content="Record notable or unique characteristics of the local release of the video
+                    game edition, not captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 

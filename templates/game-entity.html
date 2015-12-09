@@ -3,177 +3,197 @@
 
 <!-- Narrative Genre -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="narrativeGenre">Narrative Genre:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.narrativeGenre' type="title" class="form-control" id="narrativeGenre" placeholder="Enter Narrative Genre">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Narrative Genre" data-content="Determine narrative genre from the CSI. Select the most appropriate
-                term(s) from the controlled vocabulary at the most specific level
-                possible. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="narrativeGenre">Narrative Genre:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.narrativeGenre' type="title" class="form-control" id="narrativeGenre" placeholder="Enter Narrative Genre">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Narrative Genre" data-content="Determine narrative genre from the CSI. Select the most appropriate
+                    term(s) from the controlled vocabulary at the most specific level
+                    possible. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Summary -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="summary">Summary:</label>
-    <div class="col-sm-8">
-        <textarea ng-model='gameData.gameSummary' type="title" class="form-control" id="summary" placeholder="Enter Summary"></textarea>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Summary" data-content="Write a brief summary of the video game's narrative and/or main
-                features in a free text form."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="summary">Summary:</label>
+        <div class="col-xs-7 col-sm-8">
+            <textarea ng-model='gameData.gameSummary' type="title" class="form-control" id="summary" placeholder="Enter Summary"></textarea>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Summary" data-content="Write a brief summary of the video game's narrative and/or main
+                    features in a free text form."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Theme -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="theme">Theme:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.theme' type="title" class="form-control" id="theme" placeholder="Enter Theme">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Theme" data-content="Determine the theme from the primary and secondary CSI. Select the
-                most appropriate terms from the controlled vocabulary. Select as many
-                terms as necessary. If no themes are applicable, record N/A."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="theme">Theme:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.theme' type="title" class="form-control" id="theme" placeholder="Enter Theme">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Theme" data-content="Determine the theme from the primary and secondary CSI. Select the
+                    most appropriate terms from the controlled vocabulary. Select as many
+                    terms as necessary. If no themes are applicable, record N/A."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Setting -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="setting">Setting:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameWorld' type="title" class="form-control" id="world" placeholder="Enter World">
-        <input ng-model='gameData.gamePlace' type="title" class="form-control" id="place" placeholder="Enter Place">
-        <input ng-model='gameData.gameTime' type="title" class="form-control" id="time" placeholder="Enter Time">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Setting" data-content="Determine the type of world, location, time period from the primary
-                and secondary CSI. Select the most appropriate term(s) from the
-                controlled vocabulary for the three attributes. Select up to three terms
-                for each attribute. "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="setting">Setting:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameWorld' type="title" class="form-control" id="world" placeholder="Enter World">
+            <input ng-model='gameData.gamePlace' type="title" class="form-control" id="place" placeholder="Enter Place">
+            <input ng-model='gameData.gameTime' type="title" class="form-control" id="time" placeholder="Enter Time">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Setting" data-content="Determine the type of world, location, time period from the primary
+                    and secondary CSI. Select the most appropriate term(s) from the
+                    controlled vocabulary for the three attributes. Select up to three terms
+                    for each attribute. "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Mood -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="mood">Mood:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameMood' type="title" class="form-control" id="mood" placeholder="Enter Mood">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Mood" data-content="Identify the prevailing mood(s) of the video game according to the CSI;
-                generally, the experience of playing or watching a gameplay video may
-                be the most reliable source of this information. Select the most
-                appropriate term(s) from the controlled vocabulary for this element. If
-                no mood is applicable, record N/A. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="mood">Mood:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameMood' type="title" class="form-control" id="mood" placeholder="Enter Mood">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Mood" data-content="Identify the prevailing mood(s) of the video game according to the CSI;
+                    generally, the experience of playing or watching a gameplay video may
+                    be the most reliable source of this information. Select the most
+                    appropriate term(s) from the controlled vocabulary for this element. If
+                    no mood is applicable, record N/A. Select up to three terms. "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Pacing -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="pacing">Pacing:</label>
-    <div class="col-sm-2">
-        <select ng-model='gameData.battleSystems' class="form-control" id="battleSystems" placeholder="Battle System">
-            <option></option>
-            <option>Turn-based</option>
-            <option>Real-time</option>
-            <option>Other</option>
-        </select>
-        <select ng-model='gameData.inGameClock' class="form-control" id="inGameClock" placeholder="In-game Clock">
-            <option></option>
-            <option>Calendar-based</option>
-            <option>Multiple game clocks</option>
-            <option>Timed action</option>
-            <option>Continuous</option>
-            <option>Other</option>
-        </select>
-        <select ng-model='gameData.inGameClockYN' class="form-control" id="inGameClockYN" placeholder="">
-            <option></option>
-            <option>Yes</option>
-            <option>No</option>
-        </select>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Pacing" data-content="Determine the pacing information from the CSI. This information will
-                most likely come from firsthand experience of gameplay. If firsthand
-                experience is not possible, consult secondary sources.
-                When applicable, determine the pacing information for each of the
-                following three attributes: battle system (i.e., how time flows during ingame
-                battles), in-game clock (i.e., how time flows in the game
-                world), and time manipulation (i.e., the ability to stop and/or alter
-                time or the flow of time in any way). Select the most appropriate
-                term(s) from the options given below. Multiple terms can be selected
-                for the first two attributes, if applicable."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="pacing">Pacing:</label>
+        <div class="col-xs-7 col-sm-8">
+            <select ng-model='gameData.battleSystems' class="form-control" id="battleSystems" placeholder="Battle System">
+                <option></option>
+                <option>Turn-based</option>
+                <option>Real-time</option>
+                <option>Other</option>
+            </select>
+            <select ng-model='gameData.inGameClock' class="form-control" id="inGameClock" placeholder="In-game Clock">
+                <option></option>
+                <option>Calendar-based</option>
+                <option>Multiple game clocks</option>
+                <option>Timed action</option>
+                <option>Continuous</option>
+                <option>Other</option>
+            </select>
+            <select ng-model='gameData.inGameClockYN' class="form-control" id="inGameClockYN" placeholder="">
+                <option></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Pacing" data-content="Determine the pacing information from the CSI. This information will
+                    most likely come from firsthand experience of gameplay. If firsthand
+                    experience is not possible, consult secondary sources.
+                    When applicable, determine the pacing information for each of the
+                    following three attributes: battle system (i.e., how time flows during ingame
+                    battles), in-game clock (i.e., how time flows in the game
+                    world), and time manipulation (i.e., the ability to stop and/or alter
+                    time or the flow of time in any way). Select the most appropriate
+                    term(s) from the options given below. Multiple terms can be selected
+                    for the first two attributes, if applicable."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Progression -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="progression">Progression:</label>
-    <div class="col-sm-8">
-        <select ng-model='gameData.progression' class="form-control" id="progression">
-            <option></option>
-            <option>Linear</option>
-            <option>Branching</option>
-            <option>Open world</option>
-            <option>Other</option>
-        </select>
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Progression" data-content="Determine the manner in which the character progresses through the
-                video game. Linear means there is one general path from the
-                beginning to end. Branching means the play progresses through a
-                branching tree of options, or players may choose which branch(es) to
-                complete the video game in an order they choose. Open world means
-                the player has great agency to explore the game world freely and
-                progress at their own pace. Record other for types of progression not
-                outlined above. "><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="progression">Progression:</label>
+        <div class="col-xs-7 col-sm-8">
+            <select ng-model='gameData.progression' class="form-control" id="progression">
+                <option></option>
+                <option>Linear</option>
+                <option>Branching</option>
+                <option>Open world</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Progression" data-content="Determine the manner in which the character progresses through the
+                    video game. Linear means there is one general path from the
+                    beginning to end. Branching means the play progresses through a
+                    branching tree of options, or players may choose which branch(es) to
+                    complete the video game in an order they choose. Open world means
+                    the player has great agency to explore the game world freely and
+                    progress at their own pace. Record other for types of progression not
+                    outlined above. "><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Tropes -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="tropes">Tropes:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameTropes' type="title" class="form-control" id="tropes" placeholder="Enter Tropes">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Tropes" data-content="Identify the key tropes of the video game according to the CSI, and
-                other reference sources (e.g., reviews, critiques, walkthroughs, or
-                guides). Generally, the experience of playing the video game may be the
-                most reliable source, as tropes are often detailed video.
-                There are two cateogires of tropes: character tropes and narrative
-                tropes. Select the most appropriate term(s) from the controlled
-                vocabulary for this element. Select as many terms as necessary. If no
-                tropes are applicable, record N/A."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="tropes">Tropes:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameTropes' type="title" class="form-control" id="tropes" placeholder="Enter Tropes">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Tropes" data-content="Identify the key tropes of the video game according to the CSI, and
+                    other reference sources (e.g., reviews, critiques, walkthroughs, or
+                    guides). Generally, the experience of playing the video game may be the
+                    most reliable source, as tropes are often detailed video.
+                    There are two cateogires of tropes: character tropes and narrative
+                    tropes. Select the most appropriate term(s) from the controlled
+                    vocabulary for this element. Select as many terms as necessary. If no
+                    tropes are applicable, record N/A."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Packshot -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="packshot">Packshot:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.packshot' type="title" class="form-control" id="packshot" placeholder="Enter Packshot">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Packshot" data-content="If available, record a packshot of the video game licensed for use by
-                your organization or in the public domain. Create and preserve a copy
-                of the image according to your organization's standards. Upload or
-                indicate the location of the image according to your organization's
-                system design."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="packshot">Packshot:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.packshot' type="title" class="form-control" id="packshot" placeholder="Enter Packshot">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Packshot" data-content="If available, record a packshot of the video game licensed for use by
+                    your organization or in the public domain. Create and preserve a copy
+                    of the image according to your organization's standards. Upload or
+                    indicate the location of the image according to your organization's
+                    system design."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
 <!-- Game Note -->
 <div class="form-group">
-    <label class="control-label col-sm-2" for="gameNote">Game Note:</label>
-    <div class="col-sm-8">
-        <input ng-model='gameData.gameNote' type="title" class="form-control" id="gameNote" placeholder="Enter Game Note">
-    </div>
-    <div class="col-sm-2">
-        <a href='#' data-toggle="popover" data-trigger="focus" title="Game Note" data-content="Record notable or unique characteristics of the video game, not
-                captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+    <div class="col-xs-12">
+        <label class="control-label col-xs-3 col-sm-2" for="gameNote">Game Note:</label>
+        <div class="col-xs-7 col-sm-8">
+            <input ng-model='gameData.gameNote' type="title" class="form-control" id="gameNote" placeholder="Enter Game Note">
+        </div>
+        <div class="col-xs-2">
+            <a href='#' data-toggle="popover" data-trigger="focus" title="Game Note" data-content="Record notable or unique characteristics of the video game, not
+                    captured in other fields."><span class="glyphicons glyphicons-plus">+</span></a>
+        </div>
     </div>
 </div>
 
