@@ -10,7 +10,7 @@ myApp.controller('myCtrl', function($scope, $firebaseAuth, $firebaseArray, $fire
 	var entriesRef = ref.child('entries');
 
 	$scope.users = $firebaseObject(usersRef);
-	$scope.entries = $firebaseObject(entriesRef);
+	$scope.entries = $firebaseArray(entriesRef);
 	
 	$scope.authObj = $firebaseAuth(ref);
 	
